@@ -2,7 +2,7 @@ import { h } from 'preact';
 import Container from '../atoms/container';
 import Title from '../atoms/title';
 import Job from '../molecules/job';
-import info from '../../info';
+import info from '../info';
 
 /** @jsx h */
 const Jobs = () => (

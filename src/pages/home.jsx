@@ -5,7 +5,7 @@ import Title from '../atoms/title';
 import SocialIcons from '../molecules/socialIcons';
 import Badges from '../molecules/badges';
 import CenteredText from '../molecules/centeredText';
-import info from '../../info';
+import info from '../info';
 
 /** @jsx h */
 const Home = () => (
