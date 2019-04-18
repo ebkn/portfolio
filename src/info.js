@@ -7,20 +7,20 @@ export default {
       type: 'github',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
-      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/github_logo.png',
+      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/github_logo.png'
     },
     {
       type: 'twitter',
       url: 'https://twitter.com/ebikentennis',
       name: '@ebikentennis',
-      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/twitter_logo.png',
-    },
+      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/twitter_logo.png'
+    }
   ],
   skills: {
     programming: [
     ],
     language: [
-    ],
+    ]
   },
   works: [
   ],
@@ -41,19 +41,19 @@ export default {
       name: 'playground Co,. Ltd.',
       position: 'Engineer intern',
       term: '2017/7~2018/11',
-      description: '',
+      description: ''
     },
     {
       name: 'freee K.K',
       position: 'Engineer intern',
       term: '2018/8 (2 weeks)',
-      description: '',
+      description: ''
     },
     {
       name: 'div inc.',
       position: 'Web mentor at TECH::CAMP',
       term: '2017/4~2018/7',
-      description: '',
-    },
-  ],
-};
+      description: ''
+    }
+  ]
+}
