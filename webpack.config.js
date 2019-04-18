@@ -6,7 +6,7 @@ module.exports = {
   mode: env,
   entry: './src/index.jsx',
   output: {
-    path: path.resolve(__dirname, ''),
+    path: path.resolve(__dirname, 'build'),
     filename: 'main.js',
     publicPath: '/',
   },
