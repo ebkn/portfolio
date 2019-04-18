@@ -4,16 +4,22 @@ export default {
   shortProfile: 'Software Developer / University student / I love tennis, watching movies, and programming.',
   links: [
     {
-      type: 'github',
+      type: 'GitHub',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
       icon: 'github_logo.png'
     },
     {
-      type: 'twitter',
+      type: 'Twitter',
       url: 'https://twitter.com/ebikentennis',
       name: '@ebikentennis',
       icon: 'twitter_logo.png'
+    },
+    {
+      type: 'Scrapbox',
+      url: 'https://scrapbox.io/ebiken',
+      name: 'ebiken',
+      icon: 'scrapbox_logo.png'
     }
   ],
   skills: {
