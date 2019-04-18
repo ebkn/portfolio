@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Text from '../atoms/text';
 
 /** @jsx h */
-const CenteredText = ({ text }) => (
+export default ({ text }) => (
   <TextWrapper>
     <Text text={text} />
   </TextWrapper>
@@ -15,4 +15,3 @@ const TextWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
 `;
-export default CenteredText;

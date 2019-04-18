@@ -8,7 +8,7 @@ import CenteredText from '../molecules/centeredText';
 import info from '../info';
 
 /** @jsx h */
-const Home = () => (
+export default () => (
   <Container>
     <ProfileIcon />
     <Title title={info.name} />
@@ -17,4 +17,3 @@ const Home = () => (
     <CenteredText text={info.shortProfile} />
   </Container>
 );
-export default Home;

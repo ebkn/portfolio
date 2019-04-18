@@ -1,7 +1,7 @@
 export default {
   name: 'Ebinuma Kenichi (ebiken)',
   icon: 'avatar.jpg',
-  shortProfile: 'Software Developer / University student / I love tennis, watching movies, and programming.',
+  shortProfile: 'Software engineer / I love tennis, watching movies, and programming.',
   links: [
     {
       type: 'GitHub',

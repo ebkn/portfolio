@@ -4,11 +4,9 @@ import Title from '../atoms/title';
 import CenteredText from '../molecules/centeredText';
 
 /** @jsx h */
-const Works = () => (
+export default () => (
   <Container>
     <Title title="WORKS" />
     <CenteredText text="WIP" />
   </Container>
 );
-
-export default Works;

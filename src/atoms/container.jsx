@@ -2,7 +2,7 @@ import { h } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-const Container = ({ children }) => <StyledDiv>{children}</StyledDiv>;
+export default ({ children }) => <StyledDiv>{children}</StyledDiv>;
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -11,4 +11,3 @@ const StyledDiv = styled.div`
   width: 100%;
   box-sizing: border-box;
 `;
-export default Container;

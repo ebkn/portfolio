@@ -5,7 +5,7 @@ import Job from '../molecules/job';
 import info from '../info';
 
 /** @jsx h */
-const Jobs = () => (
+export default () => (
   <Container>
     <Title title="JOBS" />
     {info.jobs.map(({
@@ -24,5 +24,3 @@ const Jobs = () => (
     ))}
   </Container>
 );
-
-export default Jobs;

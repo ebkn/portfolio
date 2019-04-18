@@ -2,7 +2,7 @@ import { h } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-const Text = ({ text }) => (
+export default ({ text }) => (
   <StyledP>{text}</StyledP>
 );
 const StyledP = styled.p`
@@ -11,4 +11,3 @@ const StyledP = styled.p`
   word-break: break-word;
   color: #212121;
 `;
-export default Text;

@@ -3,7 +3,7 @@ import { Link } from 'preact-router';
 import styled from 'styled-components';
 
 /** @jsx h */
-const MobileSideBar = ({ open, toggleOpen }) => (
+export default ({ open, toggleOpen }) => (
   <StyledPcMenu open={open}>
     <IconWrapper onClick={e => toggleOpen(e)}>
       <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>
@@ -48,4 +48,3 @@ const PcStyledLink = styled(Link)`
   color: #424242;
   text-decoration: none;
 `;
-export default MobileSideBar;

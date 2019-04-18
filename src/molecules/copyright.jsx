@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Text from '../atoms/text';
 
 /** @jsx h */
-const Copyright = () => (
+export default () => (
   <StyledWrapper>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
   </StyledWrapper>
@@ -14,4 +14,3 @@ const StyledWrapper = styled.div`
   justify-content: center;
   padding: 50px 0;
 `;
-export default Copyright;

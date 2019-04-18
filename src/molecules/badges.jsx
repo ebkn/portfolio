@@ -2,7 +2,7 @@ import { h } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-const Badges = () => (
+export default () => (
   <BadgesWrapper>
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
   </BadgesWrapper>
@@ -13,4 +13,3 @@ const BadgesWrapper = styled.div`
   align-items: center;
   padding: 10px 0;
 `;
-export default Badges;

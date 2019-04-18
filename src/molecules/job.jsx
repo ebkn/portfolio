@@ -4,7 +4,7 @@ import SubTitle from '../atoms/subTitle';
 import Text from '../atoms/text';
 
 /** @jsx h */
-const Job = ({
+export default ({
   name,
   position,
   term,
@@ -55,4 +55,3 @@ const DescriptionWrapper = styled.div`
   justify-content: center;
   padding-bottom: 30px;
 `;
-export default Job;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import info from '../info';
 
 /** @jsx h */
-const ProfileIcon = () => (
+export default () => (
   <StyledWrapper>
     <StyledImg src={`/images/${info.icon}`} alt="avatar" />
   </StyledWrapper>
@@ -19,4 +19,3 @@ const StyledImg = styled.img`
   height: 80px;
   border-radius: 40px;
 `;
-export default ProfileIcon;

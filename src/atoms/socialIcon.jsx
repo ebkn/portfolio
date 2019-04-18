@@ -2,7 +2,7 @@ import { h } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-const SocialIcon = ({ url, name, icon}) => (
+export default ({ url, name, icon}) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank">
       <StyledImg src={`/images/${icon}`} alt={name} />
@@ -24,4 +24,3 @@ const StyledImg = styled.img`
   height: 30px;
   border-radius: 15px;
 `;
-export default SocialIcon;

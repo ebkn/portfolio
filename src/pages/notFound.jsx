@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Title from '../atoms/title';
 
 /** @jsx h */
-const NotFound = () => (
+export default () => (
   <StyledWrapper>
     <Title title="404 NOT FOUND" />
   </StyledWrapper>
@@ -14,4 +14,3 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export default NotFound;

@@ -4,7 +4,7 @@ import SocialIcon from '../atoms/socialIcon';
 import info from '../info';
 
 /** @jsx h */
-const SocialIcons = () => (
+export default () => (
   <IconsWrapper>
     {info.links.map(({
       url,
@@ -26,4 +26,3 @@ const IconsWrapper = styled.div`
   align-items: center;
   padding: 30px 0;
 `;
-export default SocialIcons;
