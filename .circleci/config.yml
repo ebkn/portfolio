@@ -12,6 +12,11 @@ executors:
       image: circleci/python:3.7.1
 
 commands:
+  install_dependencies:
+    steps:
+      - run:
+          name: run npm install
+          command: npm install
   lint:
     steps:
       - run:
@@ -60,6 +65,7 @@ jobs:
       name: node
     steps:
       - checkout
+      - install_dependencies
       - lint
   deploy:
     executor:
