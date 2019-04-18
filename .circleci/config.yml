@@ -14,9 +14,19 @@ executors:
 commands:
   install_dependencies:
     steps:
+      - restore_cache:
+          name: restore npm package cache
+          keys:
+            - npm-packages-{{ checksum "package-lock.json" }}
       - run:
           name: run npm install
           command: npm install
+      - save_cache:
+          name: save npm package cache
+          key: npm-packages-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/repo/node_modules
+            - ~/repo/package.json
   lint:
     steps:
       - run:
@@ -67,13 +77,13 @@ jobs:
       - checkout
       - install_dependencies
       - lint
+      - build
   deploy:
     executor:
       name: python
     steps:
       - checkout
       - install_aws-cli
-      - build
       - deploy_to_s3
       - create_invalidation
 
