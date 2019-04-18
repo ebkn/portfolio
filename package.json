@@ -1,8 +1,8 @@
 {
-  "name": "github.io",
-  "version": "0.0.1",
+  "name": "ebiken",
+  "version": "1.0.0",
   "main": "src/index.jsx",
-  "repository": "git@github.com:ebkn/ebkn.github.io",
+  "repository": "git@github.com:ebkn/ebiken",
   "author": "ebkn <ktennis.mqekr12@gmail.com>",
   "private": true,
   "scripts": {
