@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ebiken's portfolio" />
     <meta property="og:description" content="Kenichi Ebinuma (ebiken)'s portfolio" />
-    <meta property="og:image" content="/build/icons/icon-128x128.jpg" />
+    <meta property="og:image" content="/icons/icon-128x128.jpg" />
     <link rel="shortcut icon" href="https://s3-ap-northeast-1.amazonaws.com/ebkn/portfolio_favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -38,15 +38,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
     <script src="/main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
@@ -55,9 +46,9 @@
                  .then(function() { console.log('Service Worker Registered'); })
       }
     </script>
-    <link rel="apple-touch-icon" href="/build/icons/icon-72x72.jpg" sizes="72x72">
-    <link rel="apple-touch-icon" href="/build/icons/icon-96x96.jpg" sizes="96x96">
-    <link rel="apple-touch-icon" href="/build/icons/icon-128x128.jpg" sizes="128x128">
-    <link rel="apple-touch-icon" href="/build/icons/icon-144x144.jpg" sizes="144x144">
+    <link rel="apple-touch-icon" href="/icons/icon-72x72.jpg" sizes="72x72">
+    <link rel="apple-touch-icon" href="/icons/icon-96x96.jpg" sizes="96x96">
+    <link rel="apple-touch-icon" href="/icons/icon-128x128.jpg" sizes="128x128">
+    <link rel="apple-touch-icon" href="/icons/icon-144x144.jpg" sizes="144x144">
   </body>
 </html>
