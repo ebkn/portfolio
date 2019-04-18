@@ -1,0 +1,41 @@
+{
+  "name": "ebiken",
+  "version": "1.0.0",
+  "main": "src/index.jsx",
+  "repository": "git@github.com:ebkn/ebiken",
+  "author": "ebkn <ktennis.mqekr12@gmail.com>",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --watch",
+    "build": "webpack --mode production",
+    "lint": "eslint ./src/**/*.js",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.5",
+    "preact-router": "^2.6.1",
+    "styled-components": "3.4.9",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "style-loader": "^0.23.1",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
