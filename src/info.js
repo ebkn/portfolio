@@ -35,25 +35,25 @@ export default {
       name: 'STELLA, Inc.',
       position: 'Backend/Infra Engineer',
       term: '2018/8~',
-      description: ''
+      description: 'Go, Node.js, AWS(ECS,Fargate,SNS), GraphQL, MySQL, Redis'
     },
     {
       name: 'playground Co,. Ltd.',
       position: 'Engineer intern',
       term: '2017/7~2018/11',
-      description: ''
+      description: 'Rails, Angular, MySQL, Redis'
     },
     {
       name: 'freee K.K',
       position: 'Engineer intern',
       term: '2018/8 (2 weeks)',
-      description: ''
+      description: 'Rails, React'
     },
     {
       name: 'div inc.',
       position: 'TECH::CAMP mentor',
       term: '2017/4~2019/4',
-      description: ''
+      description: 'web application mentor (Rails, JavaScript)'
     }
   ]
 }
