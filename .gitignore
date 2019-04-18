@@ -12,7 +12,7 @@ pids
 *.pid.lock
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/
+build/main.js*
 
 # Dependency directories
 node_modules/
