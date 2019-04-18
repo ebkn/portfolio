@@ -2,10 +2,10 @@ import { h } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-const SocialIcon = ({ url, name, iconUrl }) => (
+const SocialIcon = ({ url, name, icon}) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank">
-      <StyledImg src={iconUrl} alt={name} />
+      <StyledImg src={`../images/{icon}`} alt={name} />
     </StyledLink>
   </IconWrapper>
 );

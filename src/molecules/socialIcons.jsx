@@ -9,12 +9,12 @@ const SocialIcons = () => (
     {info.links.map(({
       url,
       name,
-      iconUrl,
+      icon,
     }) => (
       <SocialIcon
         url={url}
         name={name}
-        iconUrl={iconUrl}
+        icon={icon}
         key={name}
       />
     ))}

@@ -5,7 +5,7 @@ import info from '../info';
 /** @jsx h */
 const ProfileIcon = () => (
   <StyledWrapper>
-    <StyledImg src={info.iconUrl} alt="avatar" />
+    <StyledImg src={info.icon} alt="avatar" />
   </StyledWrapper>
 );
 const StyledWrapper = styled.div`

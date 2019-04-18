@@ -1,19 +1,19 @@
 export default {
   name: 'Ebinuma Kenichi (ebiken)',
-  iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/bb8avatar.jpg',
+  icon: 'bb8avatar.webp',
   shortProfile: 'Software Developer / University student / I love tennis, watching movies, and programming.',
   links: [
     {
       type: 'github',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
-      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/github_logo.png'
+      icon: 'github_logo.webp'
     },
     {
       type: 'twitter',
       url: 'https://twitter.com/ebikentennis',
       name: '@ebikentennis',
-      iconUrl: 'https://s3-ap-northeast-1.amazonaws.com/ebkn/twitter_logo.png'
+      icon: 'twitter_logo.png'
     }
   ],
   skills: {
