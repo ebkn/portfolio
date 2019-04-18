@@ -1,0 +1,85 @@
+---
+version: 2.1
+
+executors:
+  node:
+    working_directory: ~/repo
+    docker:
+      image: circleci/node:11.12.0
+  python:
+    working_directory: ~/repo
+    docker:
+      image: circleci/python:3.7.1
+
+commands:
+  lint:
+    steps:
+      - run:
+          name: run linter
+          command: npm run lint
+  build:
+    steps:
+      - run:
+          name: build
+          command: npm run build
+  install_aws-cli:
+    steps:
+      - restore_cache:
+          keys:
+            - awscli
+      - run:
+          name: install awscli
+          command: |
+            if ! type aws > /dev/null 2>&1; then
+              sudo pip install awscli
+            fi
+            aws --version
+      - save_cache:
+          key: awscli
+          paths:
+            - "/usr/bin/aws"
+  deploy_to_s3:
+    steps:
+      - run:
+          name: deploy to s3
+          command: |
+            aws s3 sync ~/repo/build s3://$AWS_S3_BUCKET_NAME --delete
+
+  create_invalidation:
+    steps:
+      - run:
+          name: create invalidation at CloudFront
+          command: |
+            aws cloudfront create-invalidation \
+                --distribution-id $AWS_CLOUD_FRONT_DISTRIBUTION_ID \
+                --paths '/*'
+
+jobs:
+  lint:
+    executor:
+      name: node
+    steps:
+      - checkout
+      - lint
+  deploy:
+    executor:
+      name: python
+    steps:
+      - checkout
+      - install_awscli
+      - build
+      - deploy_to_s3
+      - create_invalidation
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - lint
+      - deploy:
+          requires:
+            - lint
+          filters:
+            branches:
+              only:
+                - master
