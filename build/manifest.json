@@ -5,7 +5,7 @@
   "background_color": "rgba(230,230,230,1)",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://ebkn.github.io",
+  "start_url": "https://portfolio.ebiken.dev",
   "icons": [
     {
       "src": "icons/icon-72x72.jpg",
