@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const SocialIcon = ({ url, name, icon}) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank">
-      <StyledImg src={`../images/{icon}`} alt={name} />
+      <StyledImg src={`/images/{icon}`} alt={name} />
     </StyledLink>
   </IconWrapper>
 );

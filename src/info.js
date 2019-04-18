@@ -1,13 +1,13 @@
 export default {
   name: 'Ebinuma Kenichi (ebiken)',
-  icon: 'bb8avatar.webp',
+  icon: 'avatar.jpg',
   shortProfile: 'Software Developer / University student / I love tennis, watching movies, and programming.',
   links: [
     {
       type: 'github',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
-      icon: 'github_logo.webp'
+      icon: 'github_logo.jpg'
     },
     {
       type: 'twitter',
