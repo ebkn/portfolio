@@ -23,6 +23,9 @@ module.exports = {
               '@babel/react',
               '@babel/env',
             ],
+            plugins: [
+              '@babel/plugin-transform-react-jsx', { 'pragma': 'h' },
+            ],
           },
         },
       },
