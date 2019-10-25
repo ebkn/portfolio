@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "es2016",
+    "module": "esnext",
+    "allowJs": true,
+    "lib": ["es6", "dom"],
+    "jsx": "react",
+    "strict": true,
+    "noImplicitAny": true,
+    "removeComments": false
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
