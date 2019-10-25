@@ -1,8 +1,13 @@
-import { h } from 'preact';
+import { h, FunctionComponent, ComponentChildren } from 'preact';
 import styled from 'styled-components';
 
+interface Props {
+  children: ComponentChildren;
+}
 /** @jsx h */
-export default ({ children }) => <StyledDiv>{children}</StyledDiv>;
+const Container: FunctionComponent<Props> = ({ children }: Props) => (
+  <StyledDiv>{children}</StyledDiv>
+);
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -11,3 +16,4 @@ const StyledDiv = styled.div`
   width: 100%;
   box-sizing: border-box;
 `;
+export default Container;

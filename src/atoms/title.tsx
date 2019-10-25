@@ -1,8 +1,11 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 
+interface Props {
+  title: string;
+}
 /** @jsx h */
-export default ({ title }) => <StyledH1>{title}</StyledH1>;
+const Title: FunctionComponent<Props> = ({ title }: Props) => <StyledH1>{title}</StyledH1>;
 const StyledH1 = styled.h1`
   margin: 0;
   padding: 25px 0;
@@ -10,3 +13,4 @@ const StyledH1 = styled.h1`
   color: #212121;
   text-align: center;
 `;
+export default Title;

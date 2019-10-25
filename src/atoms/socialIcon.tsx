@@ -1,8 +1,13 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 
+interface Props {
+  url: string;
+  name: string;
+  icon: string;
+}
 /** @jsx h */
-export default ({ url, name, icon }) => (
+const SocialIcon: FunctionComponent<Props> = ({ url, name, icon }: Props) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank">
       <StyledImg src={`/images/${icon}`} alt={name} />
@@ -24,3 +29,4 @@ const StyledImg = styled.img`
   height: 30px;
   border-radius: 15px;
 `;
+export default SocialIcon;
