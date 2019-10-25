@@ -9,7 +9,7 @@ interface Props {
 /** @jsx preact.h */
 const MobileSideBar: preact.FunctionComponent<Props> = ({ open, toggleOpen }: Props) => (
   <StyledPcMenu open={open}>
-    <IconWrapper onClick={e => toggleOpen(e)}>
+    <IconWrapper onClick={toggleOpen}>
       <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>
     </IconWrapper>
     {open ? (
@@ -22,8 +22,9 @@ const MobileSideBar: preact.FunctionComponent<Props> = ({ open, toggleOpen }: Pr
     ) : null}
   </StyledPcMenu>
 );
-const StyledPcMenu = styled.div.attrs({
-  style: props => (props.open ? { borderRight: '2px dashed #9E9E9E' } : null),
+type MenuProps = { open: boolean };
+const StyledPcMenu = styled.div.attrs<MenuProps>({
+  style: ({ open }: MenuProps) => (open ? { borderRight: '2px dashed #9E9E9E' } : null),
 })`
   position: fixed;
   width: 30%;
