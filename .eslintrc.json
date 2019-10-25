@@ -15,5 +15,12 @@
   "parser": "@typescript-eslint/parser",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
   }
 }
