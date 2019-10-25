@@ -3,4 +3,4 @@ import 'normalize.css';
 import App from './app';
 
 /** @jsx h */
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root') as HTMLElement);
