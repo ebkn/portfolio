@@ -3,6 +3,7 @@
     "outDir": "build",
     "target": "es2016",
     "module": "esnext",
+    "moduleResolution": "node",
     "allowJs": true,
     "lib": ["es6", "dom"],
     "jsx": "react",
