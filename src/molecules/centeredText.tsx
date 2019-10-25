@@ -2,16 +2,20 @@ import { h } from 'preact';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
+interface Props {
+  text: string;
+}
 /** @jsx h */
-export default ({ text }) => (
-  <TextWrapper>
+const CenteredText: FunctionComponent<Props> = ({ text }: Props) => (
+  <Wrapper>
     <Text text={text} />
-  </TextWrapper>
+  </Wrapper>
 );
-const TextWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 `;
+export default CenteredText;

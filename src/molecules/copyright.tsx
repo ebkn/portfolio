@@ -1,16 +1,17 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
 /** @jsx h */
-export default () => (
-  <StyledWrapper>
+const CopyRight: FunctionComponent<{}> = () => (
+  <Wrapper>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
-  </StyledWrapper>
+  </Wrapper>
 );
-const StyledWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   padding: 50px 0;
 `;
+export default CopyRight;

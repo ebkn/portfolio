@@ -2,8 +2,12 @@ import { h } from 'preact';
 import { Link } from 'preact-router';
 import styled from 'styled-components';
 
+interface Props {
+  open: boolean;
+  toggleOpen: (e: MouseEvent) => void;
+}
 /** @jsx h */
-export default ({ open, toggleOpen }) => (
+const MobileSideBar: FunctionComponent<Props> = ({ open, toggleOpen }: Props) => (
   <StyledPcMenu open={open}>
     <IconWrapper onClick={e => toggleOpen(e)}>
       <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>
@@ -48,3 +52,4 @@ const PcStyledLink = styled(Link)`
   color: #424242;
   text-decoration: none;
 `;
+export default MobileSideBar;

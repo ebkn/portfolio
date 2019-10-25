@@ -1,10 +1,10 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import SocialIcon from '../atoms/socialIcon';
 import info from '../info';
 
 /** @jsx h */
-export default () => (
+const SocialIcons: FunctionComponent<{}> = () => (
   <IconsWrapper>
     {info.links.map(({
       url,
@@ -26,3 +26,4 @@ const IconsWrapper = styled.div`
   align-items: center;
   padding: 30px 0;
 `;
+export default SocialIcons;

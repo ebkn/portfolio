@@ -1,15 +1,16 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 
 /** @jsx h */
-export default () => (
-  <BadgesWrapper>
+const Badges: FunctionComponent<{}> = () => (
+  <Wrapper>
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
-  </BadgesWrapper>
+  </Wrapper>
 );
-const BadgesWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
 `;
+export default Badges;

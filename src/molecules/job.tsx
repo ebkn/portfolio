@@ -1,15 +1,21 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import SubTitle from '../atoms/subTitle';
 import Text from '../atoms/text';
 
+interface Props {
+  name: string;
+  position: string;
+  term: string;
+  description: string;
+}
 /** @jsx h */
-export default ({
+const Job: FunctionComponent<Props> = ({
   name,
   position,
   term,
   description,
-}) => (
+}: Props) => (
   <StyledWrapper>
     <SubTitle title={name} />
     <SubInfoWrapper>
@@ -55,3 +61,4 @@ const DescriptionWrapper = styled.div`
   justify-content: center;
   padding-bottom: 30px;
 `;
+export default Job;

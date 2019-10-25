@@ -1,9 +1,9 @@
-import { h } from 'preact';
-import { Link } from 'preact-router/match';
+import { h, FunctionComponent } from 'preact';
+import { Link } from 'preact-router';
 import styled from 'styled-components';
 
 /** @jsx h */
-export default () => (
+const PCSideBar: FunctionComponent<{}> = () => (
   <StyledPcMenu>
     <div>
       <PcStyledLink href="/">Home</PcStyledLink>
@@ -27,3 +27,4 @@ const PcStyledLink = styled(Link)`
   color: #424242;
   text-decoration: none;
 `;
+export default PCSideBar;
