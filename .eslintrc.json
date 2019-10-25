@@ -8,8 +8,12 @@
   },
   "plugins": [
     "import",
-    "typescript",
-    "jsx-a11y",
-    "react"
-  ]
+    "@typescript-eslint",
+    "react",
+    "jsx-a11y"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+  }
 }
