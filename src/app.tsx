@@ -45,8 +45,9 @@ const StyledContainer: any = styled.div`
   display: flex;
   width: 100vw;
 `;
-const StyledMain: any = styled.main.attrs({
-  style: props => (isMobile() && !props.sideBarOpen ? { marginLeft: '0' } : { marginLeft: '30%' }),
+type MainType = { sideBarOpen: boolean };
+const StyledMain: any = styled.main.attrs<MainType>({
+  style: ({ sideBarOpen }: MainType) => (isMobile() && !sideBarOpen ? { marginLeft: '0' } : { marginLeft: '30%' }),
 })`
   width: 100%;
   box-sizing: border-box;

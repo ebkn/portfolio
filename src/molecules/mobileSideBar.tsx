@@ -47,7 +47,7 @@ const ToggleIcon: any = styled.button`
   border-style: none;
   outline: 0;
 `;
-const PcStyledLink: any = styled(Link)`
+const PcStyledLink: any = styled(Link as any)`
   display: block;
   padding: 15px 0;
   color: #424242;
