@@ -8,7 +8,7 @@
   },
   "plugins": [
     "import",
-    "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
     "react",
     "jsx-a11y"
   ],

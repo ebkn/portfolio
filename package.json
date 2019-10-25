@@ -6,10 +6,12 @@
   "author": "ebkn <ktennis.mqekr12@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --watch",
-    "build": "webpack --mode production",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint ./src/**/*.ts{x,}",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "prebuild": "npm run typecheck && npm run lint",
+    "start": "webpack-dev-server --watch",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",

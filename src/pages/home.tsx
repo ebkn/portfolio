@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import Container from '../atoms/container';
 import ProfileIcon from '../atoms/profileIcon';
 import Title from '../atoms/title';
@@ -7,8 +7,8 @@ import Badges from '../molecules/badges';
 import CenteredText from '../molecules/centeredText';
 import info from '../info';
 
-/** @jsx h */
-const HomePage: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const HomePage: preact.FunctionComponent<{}> = () => (
   <Container>
     <ProfileIcon />
     <Title title={info.name} />

@@ -1,9 +1,9 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
-/** @jsx h */
-const CopyRight: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const CopyRight: preact.FunctionComponent<{}> = () => (
   <Wrapper>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
   </Wrapper>

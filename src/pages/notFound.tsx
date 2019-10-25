@@ -1,9 +1,9 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import styled from 'styled-components';
 import Title from '../atoms/title';
 
-/** @jsx h */
-const NotFoundPage: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const NotFoundPage: preact.FunctionComponent<{}> = () => (
   <StyledWrapper>
     <Title title="404 NOT FOUND" />
   </StyledWrapper>

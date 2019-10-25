@@ -1,8 +1,8 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import styled from 'styled-components';
 
-/** @jsx h */
-const Badges: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const Badges: preact.FunctionComponent<{}> = () => (
   <Wrapper>
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
   </Wrapper>

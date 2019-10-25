@@ -1,9 +1,9 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import { Link } from 'preact-router';
 import styled from 'styled-components';
 
-/** @jsx h */
-const PCSideBar: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const PCSideBar: preact.FunctionComponent<{}> = () => (
   <StyledPcMenu>
     <div>
       <PcStyledLink href="/">Home</PcStyledLink>

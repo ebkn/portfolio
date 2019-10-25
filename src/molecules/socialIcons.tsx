@@ -1,10 +1,10 @@
-import { h, FunctionComponent } from 'preact';
+import * as preact from 'preact';
 import styled from 'styled-components';
 import SocialIcon from '../atoms/socialIcon';
 import info from '../info';
 
-/** @jsx h */
-const SocialIcons: FunctionComponent<{}> = () => (
+/** @jsx preact.h */
+const SocialIcons: preact.FunctionComponent<{}> = () => (
   <IconsWrapper>
     {info.links.map(({
       url,
