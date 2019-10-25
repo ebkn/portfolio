@@ -5,7 +5,7 @@ import Job from '../molecules/job';
 import info from '../info';
 
 /** @jsx h */
-export default () => (
+const JobsPage: FunctionComponent<{}> = () => (
   <Container>
     <Title title="JOBS" />
     {info.jobs.map(({
@@ -24,3 +24,4 @@ export default () => (
     ))}
   </Container>
 );
+export default JobsPage;

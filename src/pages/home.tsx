@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { h, FunctionComponent } from 'preact';
 import Container from '../atoms/container';
 import ProfileIcon from '../atoms/profileIcon';
 import Title from '../atoms/title';
@@ -8,7 +8,7 @@ import CenteredText from '../molecules/centeredText';
 import info from '../info';
 
 /** @jsx h */
-export default () => (
+const HomePage: FunctionComponent<{}> = () => (
   <Container>
     <ProfileIcon />
     <Title title={info.name} />
@@ -17,3 +17,4 @@ export default () => (
     <CenteredText text={info.shortProfile} />
   </Container>
 );
+export default HomePage;
