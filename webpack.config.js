@@ -4,7 +4,7 @@ const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode: env,
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'main.js',
@@ -13,12 +13,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env', '@babel/react'],
+            presets: [
+              '@babel/typescript',
+              '@babel/react',
+              '@babel/env',
+            ],
           },
         },
       },
@@ -32,7 +36,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx'],
     alias: {
       react: 'preact-compat',
       'react-dom': 'preact-compat',
