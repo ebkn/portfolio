@@ -8,7 +8,7 @@ interface Props {
 const Text: preact.FunctionComponent<Props> = ({ text }: Props) => (
   <StyledP>{text}</StyledP>
 );
-const StyledP = styled.p`
+const StyledP: any = styled.p`
   font-size: 16px;
   line-height: 24px;
   word-break: break-word;

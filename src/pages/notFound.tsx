@@ -8,7 +8,7 @@ const NotFoundPage: preact.FunctionComponent<{}> = () => (
     <Title title="404 NOT FOUND" />
   </StyledWrapper>
 );
-const StyledWrapper = styled.div`
+const StyledWrapper: any = styled.div`
   padding: 100px 0;
   display: flex;
   justify-content: center;

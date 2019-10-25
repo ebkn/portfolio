@@ -41,11 +41,11 @@ const App: preact.FunctionComponent<{}> = () => {
     </StyledContainer>
   );
 };
-const StyledContainer = styled.div`
+const StyledContainer: any = styled.div`
   display: flex;
   width: 100vw;
 `;
-const StyledMain = styled.main.attrs({
+const StyledMain: any = styled.main.attrs({
   style: props => (isMobile() && !props.sideBarOpen ? { marginLeft: '0' } : { marginLeft: '30%' }),
 })`
   width: 100%;

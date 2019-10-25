@@ -23,7 +23,7 @@ const MobileSideBar: preact.FunctionComponent<Props> = ({ open, toggleOpen }: Pr
   </StyledPcMenu>
 );
 type MenuProps = { open: boolean };
-const StyledPcMenu = styled.div.attrs<MenuProps>({
+const StyledPcMenu: any = styled.div.attrs<MenuProps>({
   style: ({ open }: MenuProps) => (open ? { borderRight: '2px dashed #9E9E9E' } : null),
 })`
   position: fixed;
@@ -32,14 +32,14 @@ const StyledPcMenu = styled.div.attrs<MenuProps>({
   box-sizing: border-box;
   padding: 30px 10px;
 `;
-const IconWrapper = styled.div`
+const IconWrapper: any = styled.div`
   width: 100%;
   height: 20px;
   padding: 25px 0;
   display: flex;
   align-items: center;
 `;
-const ToggleIcon = styled.button`
+const ToggleIcon: any = styled.button`
   font-size: 26px;
   line-height: 40px;
   background-color: transparent;
@@ -47,7 +47,7 @@ const ToggleIcon = styled.button`
   border-style: none;
   outline: 0;
 `;
-const PcStyledLink = styled(Link)`
+const PcStyledLink: any = styled(Link)`
   display: block;
   padding: 15px 0;
   color: #424242;

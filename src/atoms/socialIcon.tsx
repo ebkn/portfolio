@@ -14,17 +14,17 @@ const SocialIcon: preact.FunctionComponent<Props> = ({ url, name, icon }: Props)
     </StyledLink>
   </IconWrapper>
 );
-const IconWrapper = styled.div`
+const IconWrapper: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
 `;
-const StyledLink = styled.a`
+const StyledLink: any = styled.a`
   text-decoration: none;
   cursor: pointer;
 `;
-const StyledImg = styled.img`
+const StyledImg: any = styled.img`
   width: 30px;
   height: 30px;
   border-radius: 15px;

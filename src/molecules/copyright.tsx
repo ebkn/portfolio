@@ -8,7 +8,7 @@ const CopyRight: preact.FunctionComponent<{}> = () => (
     <Text text="&copy; 2018 Ebinuma Kenichi" />
   </Wrapper>
 );
-const Wrapper = styled.div`
+const Wrapper: any = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;

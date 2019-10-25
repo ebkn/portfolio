@@ -7,7 +7,7 @@ const Badges: preact.FunctionComponent<{}> = () => (
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
   </Wrapper>
 );
-const Wrapper = styled.div`
+const Wrapper: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -20,7 +20,7 @@ const SocialIcons: preact.FunctionComponent<{}> = () => (
     ))}
   </IconsWrapper>
 );
-const IconsWrapper = styled.div`
+const IconsWrapper: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -13,7 +13,7 @@ const PCSideBar: preact.FunctionComponent<{}> = () => (
     </div>
   </StyledPcMenu>
 );
-const StyledPcMenu = styled.div`
+const StyledPcMenu: any = styled.div`
   position: fixed;
   width: 30%;
   height: 100vh;
@@ -21,7 +21,7 @@ const StyledPcMenu = styled.div`
   padding: 2.5em 1.5em 0;
   border-right: 2px dashed #9E9E9E;
 `;
-const PcStyledLink = styled(Link)`
+const PcStyledLink: any = styled(Link)`
   display: block;
   padding: 10px 0;
   color: #424242;

@@ -11,7 +11,7 @@ const CenteredText: preact.FunctionComponent<Props> = ({ text }: Props) => (
     <Text text={text} />
   </Wrapper>
 );
-const Wrapper = styled.div`
+const Wrapper: any = styled.div`
   display: flex;
   justify-content: center;
   max-width: 400px;
