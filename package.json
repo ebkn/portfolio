@@ -13,9 +13,8 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
-    "preact": "^8.5.2",
-    "preact-compat": "^3.19.0",
-    "preact-router": "^2.6.1",
+    "preact": "10.0.1",
+    "preact-router": "3.1.0",
     "styled-components": "3.4.9",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
