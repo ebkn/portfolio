@@ -5,7 +5,9 @@ interface Props {
   title: string;
 }
 /** @jsx preact.h */
-const SubTitle: preact.FunctionComponent<Props> = ({ title }: Props) => <StyledH2>{title}</StyledH2>;
+const SubTitle: preact.FunctionComponent<Props> = ({ title }: Props) => (
+  <StyledH2>{title}</StyledH2>
+);
 const StyledH2: any = styled.h2`
   margin: 0;
   padding: 15px 0;
