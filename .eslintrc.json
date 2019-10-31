@@ -27,6 +27,9 @@
     "@typescript-eslint/no-unused-vars": "error"
   },
   "settings": {
+    "react": {
+      "pragma": "h"
+    },
     "import/resolver": {
       "node": {
         "extensions": [".ts", ".tsx"]
