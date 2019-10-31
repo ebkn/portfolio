@@ -13,6 +13,9 @@ pids
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/main.js*
+build/index.html
+build/precache-manifest*
+build/service-worker.js
 
 # Dependency directories
 node_modules/
