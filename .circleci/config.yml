@@ -36,7 +36,7 @@ commands:
     steps:
       - run:
           name: build
-          command: npm run build
+          command: NODE_ENV=production npm run build
   install_aws-cli:
     steps:
       - restore_cache:
