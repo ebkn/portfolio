@@ -40,9 +40,7 @@
     <script src="/main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('/service-worker.js')
-          .then(function() { console.log('Service Worker Registered'); })
+        navigator.serviceWorker.register('/service-worker.js')
       }
     </script>
     <link rel="apple-touch-icon" href="/icons/icon-72x72.jpg" sizes="72x72">
