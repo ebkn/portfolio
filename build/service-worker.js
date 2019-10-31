@@ -1,8 +1,7 @@
-/* eslint-disable */
-self.addEventListener('install', function() {
-  console.log('Service Worker install');
-});
-self.addEventListener('activate', function() {
-  console.log('Service Worker Activate');
-});
-self.addEventListener('fetch', function(event) {});
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}
