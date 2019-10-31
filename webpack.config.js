@@ -1,3 +1,4 @@
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
 
 const env = process.env.NODE_ENV || 'development';
@@ -45,6 +46,11 @@ module.exports = {
       'react-dom': 'preact/compat',
     },
   },
+  plugins: [
+    new WorkboxPlugin.InjectManifest({
+      swSrc: './public/service-worker.js',
+    }),
+  ],
   devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
