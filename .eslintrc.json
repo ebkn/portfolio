@@ -8,8 +8,8 @@
     "browser": true
   },
   "plugins": [
-    "import",
     "@typescript-eslint/eslint-plugin",
+    "import",
     "react",
     "jsx-a11y"
   ],
