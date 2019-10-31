@@ -1,12 +1,12 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
 interface Props {
   text: string;
 }
-/** @jsx preact.h */
-const CenteredText: preact.FunctionComponent<Props> = ({ text }: Props) => (
+/** @jsx h */
+const CenteredText: FunctionComponent<Props> = ({ text }: Props) => (
   <Wrapper>
     <Text text={text} />
   </Wrapper>

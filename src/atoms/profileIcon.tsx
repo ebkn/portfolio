@@ -1,9 +1,9 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import info from '../info';
 
-/** @jsx preact.h */
-const ProfileIcon: preact.FunctionComponent<{}> = () => (
+/** @jsx h */
+const ProfileIcon: FunctionComponent<{}> = () => (
   <Wrapper>
     <Img src={`/images/${info.icon}`} alt="avatar" />
   </Wrapper>

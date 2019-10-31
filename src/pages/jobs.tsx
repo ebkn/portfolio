@@ -1,11 +1,11 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import Container from '../atoms/container';
 import Title from '../atoms/title';
 import Job from '../molecules/job';
 import info from '../info';
 
-/** @jsx preact.h */
-const JobsPage: preact.FunctionComponent<{}> = () => (
+/** @jsx h */
+const JobsPage: FunctionComponent<{}> = () => (
   <Container>
     <Title title="JOBS" />
     {info.jobs.map(({

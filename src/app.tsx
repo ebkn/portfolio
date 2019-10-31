@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import { useState } from 'preact/hooks';
 import Router from 'preact-router';
 import styled from 'styled-components';
@@ -12,8 +12,8 @@ import PcSideBar from './molecules/pcSideBar';
 import Copyright from './molecules/copyright';
 import { isMobile } from './utils';
 
-/** @jsx preact.h */
-const App: preact.FunctionComponent<{}> = () => {
+/** @jsx h */
+const App: FunctionComponent<{}> = () => {
   const [sideBarOpen, updateSideBarOpen] = useState<boolean>(false);
 
   const toggleSideBarOpen = (e: MouseEvent): void => {

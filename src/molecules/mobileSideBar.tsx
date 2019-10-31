@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import { Link } from 'preact-router';
 import styled from 'styled-components';
 
@@ -6,8 +6,8 @@ interface Props {
   open: boolean;
   toggleOpen: (e: MouseEvent) => void;
 }
-/** @jsx preact.h */
-const MobileSideBar: preact.FunctionComponent<Props> = ({ open, toggleOpen }: Props) => (
+/** @jsx h */
+const MobileSideBar: FunctionComponent<Props> = ({ open, toggleOpen }: Props) => (
   <StyledPcMenu open={open}>
     <IconWrapper onClick={toggleOpen}>
       <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>

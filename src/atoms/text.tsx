@@ -1,11 +1,11 @@
-import * as preact from 'preact';
+import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 
 interface Props {
   text: string;
 }
-/** @jsx preact.h */
-const Text: preact.FunctionComponent<Props> = ({ text }: Props) => (
+/** @jsx h */
+const Text: FunctionComponent<Props> = ({ text }: Props) => (
   <StyledP>{text}</StyledP>
 );
 const StyledP: any = styled.p`
