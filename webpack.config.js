@@ -1,4 +1,5 @@
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const env = process.env.NODE_ENV || 'development';
@@ -47,8 +48,11 @@ module.exports = {
     },
   },
   plugins: [
-    new WorkboxPlugin.InjectManifest({
+    new WorkboxWebpackPlugin.InjectManifest({
       swSrc: './public/service-worker.js',
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
     }),
   ],
   devtool: 'source-map',
