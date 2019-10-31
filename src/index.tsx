@@ -2,6 +2,7 @@ import * as preact from 'preact'; // eslint-disable-line import/no-duplicates
 import { h } from 'preact'; // eslint-disable-line import/no-duplicates
 import * as firebase from 'firebase/app';
 import 'firebase/analytics';
+import 'firebase/performance';
 import 'normalize.css';
 import App from './app';
 
@@ -16,6 +17,7 @@ const firebaseConfig = {
   measurementId: 'G-5NNVVXSKGF',
 };
 firebase.initializeApp(firebaseConfig);
+firebase.performance();
 
 /** @jsx h */
 /* eslint-disable-next-line */
