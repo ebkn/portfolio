@@ -20,6 +20,12 @@ if (workbox) {
       cacheName: 'font',
     }),
   );
+  workbox.routing.registerRoute(
+    'https://img.shields.io/badge/status-good-green.svg',
+    new workbox.strategies.CacheFirst({
+      cacheName: 'good-status-badge',
+    }),
+  );
 } else {
   console.log('failed to load workbox');
 }
