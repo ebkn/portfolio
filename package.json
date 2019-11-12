@@ -10,8 +10,9 @@
     "lint": "eslint ./src/**/*.ts{x,}",
     "lint:fix": "yarn lint --fix",
     "prebuild": "npm run typecheck && npm run lint",
-    "start": "webpack-dev-server --watch",
-    "build": "NODE_ENV=production webpack"
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "firebase": "^7.2.2",
