@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { useState } from 'react/hooks';
 import styled from 'styled-components';
 import { isMobile } from './utils';
@@ -10,7 +10,7 @@ interface Props {
   children: any;
 }
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children }) => {
   const [sideBarOpen, updateSideBarOpen] = useState<boolean>(false);
 
   const toggleSideBarOpen = (e: MouseEvent): void => {

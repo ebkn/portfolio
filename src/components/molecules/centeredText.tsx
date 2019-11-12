@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
 interface Props {
   text: string;
 }
-const CenteredText: FC<Props> = ({ text }: Props) => (
+const CenteredText: React.FC<Props> = ({ text }: Props) => (
   <Wrapper>
     <Text text={text} />
   </Wrapper>

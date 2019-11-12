@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Layout from '../layout';
 import Title from '../components/atoms/title';
 
-const NotFoundPage: FC<{}> = () => (
+const NotFoundPage: React.FC<{}> = () => (
   <Layout>
     <StyledWrapper>
       <Title title="404 NOT FOUND" />

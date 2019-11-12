@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
 import styled from 'styled-components';
 
@@ -6,7 +6,7 @@ interface Props {
   open: boolean;
   toggleOpen: (e: MouseEvent) => void;
 }
-const MobileSideBar: FC<Props> = ({ open, toggleOpen }: Props) => (
+const MobileSideBar: React.FC<Props> = ({ open, toggleOpen }: Props) => (
   <StyledPcMenu open={open}>
     <IconWrapper onClick={toggleOpen}>
       <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>

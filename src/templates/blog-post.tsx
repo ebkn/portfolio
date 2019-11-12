@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   location: any;
 }
 
-const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
+const BlogPostTemplate: React.FC<Props> = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
 
   return (

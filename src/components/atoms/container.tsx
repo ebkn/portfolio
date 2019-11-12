@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
   children: react.ComponentChildren;
 }
-const Container: FC<Props> = ({ children }: Props) => (
+const Container: React.FC<Props> = ({ children }: Props) => (
   <StyledDiv>{children}</StyledDiv>
 );
 const StyledDiv: any = styled.div`

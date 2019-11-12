@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
 import styled from 'styled-components';
 
-const PCSideBar: FC<{}> = () => (
+const PCSideBar: React.FC<{}> = () => (
   <StyledPcMenu>
     <div>
       <PcStyledLink href="/">Home</PcStyledLink>

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import SubTitle from '../atoms/subTitle';
 import Text from '../atoms/text';
@@ -9,7 +9,7 @@ interface Props {
   term: string;
   description: string;
 }
-const Job: FC<Props> = ({
+const Job: React.FC<Props> = ({
   name,
   position,
   term,

@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
   text: string;
 }
-const Text: FC<Props> = ({ text }: Props) => (
+const Text: React.FC<Props> = ({ text }: Props) => (
   <StyledP>{text}</StyledP>
 );
 const StyledP: any = styled.p`

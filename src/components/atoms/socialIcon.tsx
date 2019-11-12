@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   name: string;
   icon: string;
 }
-const SocialIcon: FC<Props> = ({ url, name, icon }: Props) => (
+const SocialIcon: React.FC<Props> = ({ url, name, icon }: Props) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank" rel="noopener">
       <StyledImg src={`/images/${icon}`} alt={name} />

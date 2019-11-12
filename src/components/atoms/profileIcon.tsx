@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
   fileName: string;
 }
 
-const ProfileIcon: FC<Props> = ({ fileName }) => (
+const ProfileIcon: React.FC<Props> = ({ fileName }) => (
   <Wrapper>
     <Img src={`/images/${fileName}`} alt="avatar" />
   </Wrapper>

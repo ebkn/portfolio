@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
-const CopyRight: FC<{}> = () => (
+const CopyRight: React.FC<{}> = () => (
   <Wrapper>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
   </Wrapper>

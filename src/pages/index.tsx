@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import Layout from '../layout';
 import Container from '../components/atoms/container';
 import ProfileIcon from '../components/atoms/profileIcon';
@@ -8,7 +8,7 @@ import Badges from '../components/molecules/badges';
 import CenteredText from '../components/molecules/centeredText';
 import info from '../info';
 
-const IndexPage: FC<{}> = () => (
+const IndexPage: React.FC<{}> = () => (
   <Layout>
     <Container>
       <ProfileIcon fileName={info.icon} />

@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import * as React from 'react';
 import Container from '../components/atoms/container';
 import Title from '../components/atoms/title';
 import Job from '../components/molecules/job';
 import info from '../info';
 
-const JobsPage: FC<{}> = () => (
+const JobsPage: React.FC<{}> = () => (
   <Container>
     <Title title="JOBS" />
     {info.jobs.map(({

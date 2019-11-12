@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
   title: string;
 }
-const SubTitle: FC<Props> = ({ title }: Props) => (
+const SubTitle: React.FC<Props> = ({ title }: Props) => (
   <StyledH2>{title}</StyledH2>
 );
 const StyledH2: any = styled.h2`

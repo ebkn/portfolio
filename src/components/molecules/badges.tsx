@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
-const Badges: FC<{}> = () => (
+const Badges: React.FC<{}> = () => (
   <Wrapper>
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
   </Wrapper>

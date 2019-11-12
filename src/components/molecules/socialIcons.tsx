@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import SocialIcon from '../atoms/socialIcon';
 
@@ -11,7 +11,7 @@ interface Props {
   links: Link[];
 }
 
-const SocialIcons: FC<Props> = ({ links }) => (
+const SocialIcons: React.FC<Props> = ({ links }) => (
   <IconsWrapper>
     {links.map(({ url, name, icon }) => (
       <SocialIcon
