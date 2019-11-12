@@ -1,6 +1,13 @@
 module.exports = {
   plugins: [
-    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        jsxPragma: 'h',
+        allExtensions: true,
+      },
+    },
     'gatsby-plugin-preact',
     {
       resolve: 'gatsby-source-filesystem',
