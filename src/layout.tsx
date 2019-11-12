@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react/hooks';
 import styled from 'styled-components';
 import { isMobile } from './utils';
 import MobileSideBar from './components/molecules/mobileSideBar';
@@ -11,7 +10,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
-  const [sideBarOpen, updateSideBarOpen] = useState<boolean>(false);
+  const [sideBarOpen, updateSideBarOpen] = React.useState<boolean>(false);
 
   const toggleSideBarOpen = (e: MouseEvent): void => {
     e.preventDefault();
