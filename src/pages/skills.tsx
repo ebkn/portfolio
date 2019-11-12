@@ -1,7 +1,7 @@
 import { h, FunctionComponent } from 'preact';
-import Container from '../atoms/container';
-import Title from '../atoms/title';
-import CenteredText from '../molecules/centeredText';
+import Container from '../components/atoms/container';
+import Title from '../components/atoms/title';
+import CenteredText from '../components/molecules/centeredText';
 
 /** @jsx h */
 const SkillsPage: FunctionComponent<{}> = () => (

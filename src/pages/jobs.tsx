@@ -1,7 +1,7 @@
 import { h, FunctionComponent } from 'preact';
-import Container from '../atoms/container';
-import Title from '../atoms/title';
-import Job from '../molecules/job';
+import Container from '../components/atoms/container';
+import Title from '../components/atoms/title';
+import Job from '../components/molecules/job';
 import info from '../info';
 
 /** @jsx h */

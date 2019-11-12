@@ -1,16 +1,20 @@
 import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
 import SocialIcon from '../atoms/socialIcon';
-import info from '../info';
+
+interface Link {
+  url: string;
+  name: string;
+  icon: string;
+}
+interface Props {
+  links: Link[];
+}
 
 /** @jsx h */
-const SocialIcons: FunctionComponent<{}> = () => (
+const SocialIcons: FunctionComponent<Props> = ({ links }) => (
   <IconsWrapper>
-    {info.links.map(({
-      url,
-      name,
-      icon,
-    }) => (
+    {links.map(({ url, name, icon }) => (
       <SocialIcon
         url={url}
         name={name}

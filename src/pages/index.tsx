@@ -12,9 +12,9 @@ import info from '../info';
 const IndexPage: FunctionComponent<{}> = () => (
   <Layout>
     <Container>
-      <ProfileIcon />
+      <ProfileIcon fileName={info.icon} />
       <Title title={info.name} />
-      <SocialIcons />
+      <SocialIcons links={info.links} />
       <Badges />
       <CenteredText text={info.shortProfile} />
     </Container>

@@ -1,11 +1,14 @@
 import { h, FunctionComponent } from 'preact';
 import styled from 'styled-components';
-import info from '../info';
+
+interface Props {
+  fileName: string;
+}
 
 /** @jsx h */
-const ProfileIcon: FunctionComponent<{}> = () => (
+const ProfileIcon: FunctionComponent<Props> = ({ fileName }) => (
   <Wrapper>
-    <Img src={`/images/${info.icon}`} alt="avatar" />
+    <Img src={`/images/${fileName}`} alt="avatar" />
   </Wrapper>
 );
 const Wrapper: any = styled.div`
