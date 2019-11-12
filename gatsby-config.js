@@ -1,15 +1,6 @@
 module.exports = {
   plugins: [
     {
-      resolve: 'gatsby-plugin-typescript',
-      options: {
-        isTSX: true,
-        jsxPragma: 'h',
-        allExtensions: true,
-      },
-    },
-    'gatsby-plugin-preact',
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
@@ -39,5 +30,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        jsxPragma: 'h',
+        allExtensions: true,
+      },
+    },
+    'gatsby-plugin-preact',
   ],
 };
