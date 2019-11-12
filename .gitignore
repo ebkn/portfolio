@@ -19,3 +19,6 @@ build/service-worker.js
 
 # Dependency directories
 node_modules/
+
+# automatically generated directory
+public
