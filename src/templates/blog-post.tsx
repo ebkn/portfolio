@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
-  data: any;
+  data: BlogPostBySlugQuery;
 }
 
 const BlogPostTemplate: React.FC<Props> = ({ data }) => {
@@ -20,7 +21,9 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
               {post.frontmatter.date}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line react/no-danger
+          />
         </article>
       </main>
     </div>
