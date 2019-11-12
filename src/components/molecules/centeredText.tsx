@@ -1,12 +1,11 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
 interface Props {
   text: string;
 }
-/** @jsx h */
-const CenteredText: FunctionComponent<Props> = ({ text }: Props) => (
+const CenteredText: FC<Props> = ({ text }: Props) => (
   <Wrapper>
     <Text text={text} />
   </Wrapper>

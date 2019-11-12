@@ -1,9 +1,8 @@
-import { h, FunctionComponent } from 'preact';
-import { Link } from 'preact-router';
+import { FC } from 'react';
+import { Link } from 'react-router';
 import styled from 'styled-components';
 
-/** @jsx h */
-const PCSideBar: FunctionComponent<{}> = () => (
+const PCSideBar: FC<{}> = () => (
   <StyledPcMenu>
     <div>
       <PcStyledLink href="/">Home</PcStyledLink>

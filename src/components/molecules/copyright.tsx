@@ -1,9 +1,8 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/text';
 
-/** @jsx h */
-const CopyRight: FunctionComponent<{}> = () => (
+const CopyRight: FC<{}> = () => (
   <Wrapper>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
   </Wrapper>

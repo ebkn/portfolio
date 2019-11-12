@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 import SocialIcon from '../atoms/socialIcon';
 
@@ -11,8 +11,7 @@ interface Props {
   links: Link[];
 }
 
-/** @jsx h */
-const SocialIcons: FunctionComponent<Props> = ({ links }) => (
+const SocialIcons: FC<Props> = ({ links }) => (
   <IconsWrapper>
     {links.map(({ url, name, icon }) => (
       <SocialIcon

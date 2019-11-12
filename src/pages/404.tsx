@@ -1,10 +1,9 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 import Layout from '../layout';
 import Title from '../components/atoms/title';
 
-/** @jsx h */
-const NotFoundPage: FunctionComponent<{}> = () => (
+const NotFoundPage: FC<{}> = () => (
   <Layout>
     <StyledWrapper>
       <Title title="404 NOT FOUND" />

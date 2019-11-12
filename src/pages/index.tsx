@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import Layout from '../layout';
 import Container from '../components/atoms/container';
 import ProfileIcon from '../components/atoms/profileIcon';
@@ -8,8 +8,7 @@ import Badges from '../components/molecules/badges';
 import CenteredText from '../components/molecules/centeredText';
 import info from '../info';
 
-/** @jsx h */
-const IndexPage: FunctionComponent<{}> = () => (
+const IndexPage: FC<{}> = () => (
   <Layout>
     <Container>
       <ProfileIcon fileName={info.icon} />

@@ -1,11 +1,10 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
   text: string;
 }
-/** @jsx h */
-const Text: FunctionComponent<Props> = ({ text }: Props) => (
+const Text: FC<Props> = ({ text }: Props) => (
   <StyledP>{text}</StyledP>
 );
 const StyledP: any = styled.p`

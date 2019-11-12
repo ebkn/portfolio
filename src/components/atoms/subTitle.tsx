@@ -1,11 +1,10 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
   title: string;
 }
-/** @jsx h */
-const SubTitle: FunctionComponent<Props> = ({ title }: Props) => (
+const SubTitle: FC<Props> = ({ title }: Props) => (
   <StyledH2>{title}</StyledH2>
 );
 const StyledH2: any = styled.h2`

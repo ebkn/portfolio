@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
@@ -6,8 +6,7 @@ interface Props {
   name: string;
   icon: string;
 }
-/** @jsx h */
-const SocialIcon: FunctionComponent<Props> = ({ url, name, icon }: Props) => (
+const SocialIcon: FC<Props> = ({ url, name, icon }: Props) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank" rel="noopener">
       <StyledImg src={`/images/${icon}`} alt={name} />

@@ -1,11 +1,10 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
   title: string;
 }
-/** @jsx h */
-const Title: FunctionComponent<Props> = ({ title }: Props) => <StyledH1>{title}</StyledH1>;
+const Title: FC<Props> = ({ title }: Props) => <StyledH1>{title}</StyledH1>;
 const StyledH1: any = styled.h1`
   margin: 0;
   padding: 25px 0;

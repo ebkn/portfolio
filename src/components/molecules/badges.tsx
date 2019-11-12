@@ -1,8 +1,7 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-/** @jsx h */
-const Badges: FunctionComponent<{}> = () => (
+const Badges: FC<{}> = () => (
   <Wrapper>
     <img src="https://img.shields.io/badge/status-good-green.svg" alt="my status" />
   </Wrapper>

@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import { graphql, Link } from 'gatsby';
 
 interface Props {
@@ -7,8 +7,7 @@ interface Props {
   location: any;
 }
 
-/** @jsx h */
-const BlogPostTemplate: FunctionComponent<Props> = ({ data, pageContext, location }) => {
+const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
 
   return (

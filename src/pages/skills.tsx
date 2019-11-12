@@ -1,10 +1,9 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import Container from '../components/atoms/container';
 import Title from '../components/atoms/title';
 import CenteredText from '../components/molecules/centeredText';
 
-/** @jsx h */
-const SkillsPage: FunctionComponent<{}> = () => (
+const SkillsPage: FC<{}> = () => (
   <Container>
     <Title title="SKILLS" />
     <CenteredText text="WIP" />

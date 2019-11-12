@@ -1,11 +1,10 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
-  children: preact.ComponentChildren;
+  children: react.ComponentChildren;
 }
-/** @jsx h */
-const Container: FunctionComponent<Props> = ({ children }: Props) => (
+const Container: FC<Props> = ({ children }: Props) => (
   <StyledDiv>{children}</StyledDiv>
 );
 const StyledDiv: any = styled.div`

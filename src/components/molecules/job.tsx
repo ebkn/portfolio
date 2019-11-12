@@ -1,4 +1,4 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 import SubTitle from '../atoms/subTitle';
 import Text from '../atoms/text';
@@ -9,8 +9,7 @@ interface Props {
   term: string;
   description: string;
 }
-/** @jsx h */
-const Job: FunctionComponent<Props> = ({
+const Job: FC<Props> = ({
   name,
   position,
   term,

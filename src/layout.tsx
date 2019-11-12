@@ -1,5 +1,5 @@
-import { h, FunctionComponent } from 'preact';
-import { useState } from 'preact/hooks';
+import { FC } from 'react';
+import { useState } from 'react/hooks';
 import styled from 'styled-components';
 import { isMobile } from './utils';
 import MobileSideBar from './components/molecules/mobileSideBar';
@@ -10,8 +10,7 @@ interface Props {
   children: any;
 }
 
-/** @jsx h */
-const Layout: FunctionComponent<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ children }) => {
   const [sideBarOpen, updateSideBarOpen] = useState<boolean>(false);
 
   const toggleSideBarOpen = (e: MouseEvent): void => {

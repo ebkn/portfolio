@@ -1,12 +1,11 @@
-import { h, FunctionComponent } from 'preact';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 interface Props {
   fileName: string;
 }
 
-/** @jsx h */
-const ProfileIcon: FunctionComponent<Props> = ({ fileName }) => (
+const ProfileIcon: FC<Props> = ({ fileName }) => (
   <Wrapper>
     <Img src={`/images/${fileName}`} alt="avatar" />
   </Wrapper>
