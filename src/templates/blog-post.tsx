@@ -3,22 +3,13 @@ import { graphql, Link } from 'gatsby';
 
 interface Props {
   data: any;
-  pageContext: any;
-  location: any;
 }
 
-const BlogPostTemplate: React.FC<Props> = ({ data, pageContext, location }) => {
+const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   const post = data.markdownRemark;
 
   return (
     <div>
-      <header>
-        <h3>
-          <Link to="/">
-            {siteTitle}
-          </Link>
-        </h3>
-      </header>
       <main>
         <article>
           <header>
