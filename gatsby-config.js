@@ -34,11 +34,9 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-typescript',
     {
-      resolve: 'gatsby-plugin-typescript',
+      resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        isTSX: true,
-        jsxPragma: 'jsx',
-        allExtensions: true,
+        fileName: 'types/graphql-types.d.ts',
       },
     },
   ],
