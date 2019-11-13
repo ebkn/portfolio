@@ -6,34 +6,38 @@ interface Props {
   open: boolean;
   toggleOpen: (e: MouseEvent) => void;
 }
+
 const MobileSideBar: React.FC<Props> = ({ open, toggleOpen }: Props) => (
-  <StyledPcMenu open={open}>
-    <IconWrapper onClick={toggleOpen}>
-      <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>
-    </IconWrapper>
-    {open ? (
+  <React.Fragment>
+    <StyledPcMenu open={open}>
       <div>
         <PcStyledLink to="/">Home</PcStyledLink>
         <PcStyledLink to="/jobs">Jobs</PcStyledLink>
         <PcStyledLink to="/blog">Blog</PcStyledLink>
       </div>
-    ) : null}
-  </StyledPcMenu>
+    </StyledPcMenu>
+    <IconWrapper onClick={toggleOpen} open={open}>
+      <ToggleIcon type="button">{open ? '<' : '>'}</ToggleIcon>
+    </IconWrapper>
+  </React.Fragment>
 );
+
 type MenuProps = { open: boolean };
-const StyledPcMenu: any = styled.div.attrs<MenuProps>({
-  style: ({ open }: MenuProps) => (open ? { borderRight: '2px dashed #9E9E9E' } : null),
-})`
+
+const StyledPcMenu: any = styled.div`
+  display: ${({ open }: MenuProps) => open ? 'block' : 'none'};
   position: fixed;
-  width: 30%;
+  width: 25%;
   height: 100vh;
   box-sizing: border-box;
-  padding: 30px 10px;
+  padding: 50px 10px 10px 10px;
+  border-right: ${({ open }: MenuProps) => open ? '2px dashed #9E9E9E' : 'none'};
 `;
 const IconWrapper: any = styled.div`
+  position: ${({ open }: MenuProps) => open ? 'fixed' : 'absolute'};
   width: 100%;
   height: 20px;
-  padding: 25px 0;
+  padding: 25px 10px;
   display: flex;
   align-items: center;
 `;
