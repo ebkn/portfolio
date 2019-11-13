@@ -6,8 +6,6 @@ const PCSideBar: React.FC<{}> = () => (
   <StyledPcMenu>
     <div>
       <PcStyledLink to="/">Home</PcStyledLink>
-      <PcStyledLink to="/skills">Skills</PcStyledLink>
-      <PcStyledLink to="/works">Works</PcStyledLink>
       <PcStyledLink to="/jobs">Jobs</PcStyledLink>
     </div>
   </StyledPcMenu>
