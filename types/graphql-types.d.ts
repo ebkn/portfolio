@@ -2271,6 +2271,19 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___name' |
   'pluginCreator___pluginOptions___maxWidth' |
   'pluginCreator___pluginOptions___fileName' |
+  'pluginCreator___pluginOptions___fonts' |
+  'pluginCreator___pluginOptions___fonts___family' |
+  'pluginCreator___pluginOptions___precachePages' |
+  'pluginCreator___pluginOptions___short_name' |
+  'pluginCreator___pluginOptions___start_url' |
+  'pluginCreator___pluginOptions___background_color' |
+  'pluginCreator___pluginOptions___theme_color' |
+  'pluginCreator___pluginOptions___display' |
+  'pluginCreator___pluginOptions___icon' |
+  'pluginCreator___pluginOptions___icons' |
+  'pluginCreator___pluginOptions___icons___src' |
+  'pluginCreator___pluginOptions___icons___sizes' |
+  'pluginCreator___pluginOptions___icons___type' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
   'pluginCreator___browserAPIs' |
@@ -2470,6 +2483,19 @@ export type SitePluginFieldsEnum =
   'pluginOptions___name' |
   'pluginOptions___maxWidth' |
   'pluginOptions___fileName' |
+  'pluginOptions___fonts' |
+  'pluginOptions___fonts___family' |
+  'pluginOptions___precachePages' |
+  'pluginOptions___short_name' |
+  'pluginOptions___start_url' |
+  'pluginOptions___background_color' |
+  'pluginOptions___theme_color' |
+  'pluginOptions___display' |
+  'pluginOptions___icon' |
+  'pluginOptions___icons' |
+  'pluginOptions___icons___src' |
+  'pluginOptions___icons___sizes' |
+  'pluginOptions___icons___type' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
   'browserAPIs' |
@@ -2588,6 +2614,15 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>,
   maxWidth?: Maybe<Scalars['Int']>,
   fileName?: Maybe<Scalars['String']>,
+  fonts?: Maybe<Array<Maybe<SitePluginPluginOptionsFonts>>>,
+  precachePages?: Maybe<Array<Maybe<Scalars['String']>>>,
+  short_name?: Maybe<Scalars['String']>,
+  start_url?: Maybe<Scalars['String']>,
+  background_color?: Maybe<Scalars['String']>,
+  theme_color?: Maybe<Scalars['String']>,
+  display?: Maybe<Scalars['String']>,
+  icon?: Maybe<Scalars['String']>,
+  icons?: Maybe<Array<Maybe<SitePluginPluginOptionsIcons>>>,
   pathCheck?: Maybe<Scalars['Boolean']>,
 };
 
@@ -2597,7 +2632,44 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>,
   maxWidth?: Maybe<IntQueryOperatorInput>,
   fileName?: Maybe<StringQueryOperatorInput>,
+  fonts?: Maybe<SitePluginPluginOptionsFontsFilterListInput>,
+  precachePages?: Maybe<StringQueryOperatorInput>,
+  short_name?: Maybe<StringQueryOperatorInput>,
+  start_url?: Maybe<StringQueryOperatorInput>,
+  background_color?: Maybe<StringQueryOperatorInput>,
+  theme_color?: Maybe<StringQueryOperatorInput>,
+  display?: Maybe<StringQueryOperatorInput>,
+  icon?: Maybe<StringQueryOperatorInput>,
+  icons?: Maybe<SitePluginPluginOptionsIconsFilterListInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsFonts = {
+  family?: Maybe<Scalars['String']>,
+};
+
+export type SitePluginPluginOptionsFontsFilterInput = {
+  family?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsFontsFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsFontsFilterInput>,
+};
+
+export type SitePluginPluginOptionsIcons = {
+  src?: Maybe<Scalars['String']>,
+  sizes?: Maybe<Scalars['String']>,
+  type?: Maybe<Scalars['String']>,
+};
+
+export type SitePluginPluginOptionsIconsFilterInput = {
+  src?: Maybe<StringQueryOperatorInput>,
+  sizes?: Maybe<StringQueryOperatorInput>,
+  type?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsIconsFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsIconsFilterInput>,
 };
 
 export type SitePluginPluginOptionsPlugins = {
