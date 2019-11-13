@@ -33,6 +33,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
