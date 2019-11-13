@@ -2753,10 +2753,10 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>,
 };
 
-export type Unnamed_1_QueryVariables = {};
+export type SiteQueryVariables = {};
 
 
-export type Unnamed_1_Query = { site: Maybe<{ siteMetadata: Maybe<(
+export type SiteQuery = { site: Maybe<{ siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'author' | 'description' | 'siteUrl'>
       & { social: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };

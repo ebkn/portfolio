@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { SiteQuery } from '../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
   lang: 'en' | 'ja';
@@ -9,27 +10,28 @@ interface Props {
   description?: string;
 }
 
-const Head: React.FC<Props> = ({ lang, meta, title, description }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            author
-            description
-            siteUrl
-            social {
-              twitter
-            }
-          }
+const query = graphql`
+ query Site {
+    site {
+      siteMetadata {
+        title
+        author
+        description
+        siteUrl
+        social {
+          twitter
         }
       }
-    `
-  );
-  const metaTitle = title || site.siteMetaData.title;
+    }
+  }
+`;
+
+const Head: React.FC<Props> = ({ lang, meta = {}, title = '', description = '' }) => {
+  const { site } = useStaticQuery<SiteQuery>(query);
+
+  const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
-  const { author, siteUrl, social } = site.siteMetaData;
+  const { author, siteUrl, social } = site.siteMetadata;
 
   return (
     <Helmet

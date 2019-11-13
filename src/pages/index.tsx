@@ -11,7 +11,7 @@ import info from '../info';
 
 const IndexPage: React.FC<{}> = () => (
   <Layout>
-    <Head lang='ja' />
+    <Head lang="ja" />
     <Container>
       <ProfileIcon fileName={info.icon} />
       <Title title={info.name} />
