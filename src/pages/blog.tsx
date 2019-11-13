@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
 import Title from '../components/atoms/title';
+import BlogSubTitle from '../components/atoms/blogSubTitle';
 import { PageQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -21,15 +23,13 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
+            <StyledArticle key={node.fields.slug}>
+              <StyledHeader>
+                <StyledLink to={node.fields.slug}>
+                  <BlogSubTitle title={title} />
+                </StyledLink>
+                <StyledDate>{node.frontmatter.date}</StyledDate>
+              </StyledHeader>
               <section>
                 <p
                   dangerouslySetInnerHTML={{
@@ -37,7 +37,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
                   }}
                 />
               </section>
-            </article>
+            </StyledArticle>
           )
         })}
       </Container>
@@ -45,6 +45,21 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
   );
 };
 export default BlogIndex;
+
+const StyledArticle = styled.article`
+  padding: 10px 0;
+`
+const StyledHeader = styled.header`
+  padding: 3px 0;
+`;
+const StyledDate = styled.small`
+  margin: 0;
+  font-size: 11px;
+  color: #424242;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export const pageQuery = graphql`
   query Page {

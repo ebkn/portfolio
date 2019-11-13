@@ -36,7 +36,7 @@ export default BlogPostTemplate;
 const StyledHeader = styled.header`
   padding: 20px 0;
 `;
-const StyledDate = styled.p`
+const StyledDate = styled.small`
   margin: 0;
   font-size: 13px;
   color: #424242;
