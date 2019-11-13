@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 import Layout from '../layout';
 import Head from '../head';
+import Container from '../components/atoms/container';
+import BlogTitle from '../components/atoms/blogTitle';
 import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -14,25 +17,30 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   return (
     <Layout>
       <Head lang="ja" title={post.frontmatter.title} />
-      <main>
-        <article>
-          <header>
-            <h1>
-              {post.frontmatter.title}
-            </h1>
-            <p>
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line react/no-danger
-          />
-        </article>
-      </main>
+      <Container>
+        <StyledHeader>
+          <BlogTitle title={post.frontmatter.title} />
+          <StyledDate>
+            {post.frontmatter.date}
+          </StyledDate>
+        </StyledHeader>
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line react/no-danger
+        />
+      </Container>
     </Layout>
   );
 };
 export default BlogPostTemplate;
+
+const StyledHeader = styled.header`
+  padding: 20px 0;
+`;
+const StyledDate = styled.p`
+  margin: 0;
+  font-size: 13px;
+  color: #424242;
+`;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
