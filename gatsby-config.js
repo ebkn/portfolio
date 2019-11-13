@@ -1,4 +1,13 @@
 module.exports = {
+  siteMetadata: {
+    title: 'ebiken portfolio',
+    author: 'ebiken',
+    description: '',
+    siteUrl: 'https://portfolio.ebiken.dev',
+    social: {
+      twitter: '@ebikentennis',
+    },
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

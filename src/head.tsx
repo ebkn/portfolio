@@ -4,9 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 interface Props {
   lang: 'en' | 'ja';
-  meta: object;
-  title: string;
-  description: string;
+  meta?: object;
+  title?: string;
+  description?: string;
 }
 
 const Head: React.FC<Props> = ({ lang, meta, title, description }) => {
@@ -16,32 +16,38 @@ const Head: React.FC<Props> = ({ lang, meta, title, description }) => {
         site {
           siteMetadata {
             title
-            description
             author
+            description
+            siteUrl
+            social {
+              twitter
+            }
           }
         }
       }
     `
   );
+  const metaTitle = title || site.siteMetaData.title;
   const metaDescription = description || site.siteMetadata.description;
+  const { author, siteUrl, social } = site.siteMetaData;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
+      titleTemplate={`%s | ${metaTitle}`}
       meta={[
         { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
         { name: 'description', content: metaDescription },
-        { name: 'author', content: 'Kenichi Ebinuma' },
+        { name: 'author', content: author },
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: '@ebikentennis' },
-        { property: 'og:url', content: 'https://portfolio.ebiken.dev' },
-        { property: 'og:title', content: title },
+        { name: 'twitter:site', content: social.twitter },
+        { property: 'og:url', content: siteUrl },
+        { property: 'og:title', content: metaTitle },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: title },
+        { property: 'og:site_name', content: metaTitle },
         { property: 'og:description', content: metaDescription },
       ].concat(meta)}
     />
