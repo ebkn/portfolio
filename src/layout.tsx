@@ -5,6 +5,12 @@ import MobileSideBar from './components/molecules/mobileSideBar';
 import PcSideBar from './components/molecules/pcSideBar';
 import Copyright from './components/molecules/copyright';
 
+const GlobalStyle = styled.createGlobalStyle`
+body {
+  background-color: ${(props: { theme: 'white' | 'black' }) => (props.theme === 'white' ? 'white' : 'black')};
+}
+`;
+
 interface Props {
   children: any;
 }
@@ -19,6 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <StyledContainer>
+      <GlobalStyle theme="white" />
       {isMobile() ? (
         <MobileSideBar open={sideBarOpen} toggleOpen={toggleSideBarOpen} />
       ) : (
