@@ -2761,6 +2761,14 @@ export type SiteQuery = { site: Maybe<{ siteMetadata: Maybe<(
       & { social: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };
 
+export type PageQueryVariables = {};
+
+
+export type PageQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'excerpt'>
+        & { fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
+      ) }> } };
+
 export type BlogPostBySlugQueryVariables = {
   slug: Scalars['String']
 };

@@ -15,6 +15,7 @@ const MobileSideBar: React.FC<Props> = ({ open, toggleOpen }: Props) => (
       <div>
         <PcStyledLink to="/">Home</PcStyledLink>
         <PcStyledLink to="/jobs">Jobs</PcStyledLink>
+        <PcStyledLink to="/blog">Blog</PcStyledLink>
       </div>
     ) : null}
   </StyledPcMenu>

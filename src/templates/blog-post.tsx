@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import Layout from '../layout';
+import Head from '../head';
 import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -10,7 +12,8 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   const post = data.markdownRemark;
 
   return (
-    <div>
+    <Layout>
+      <Head lang="ja" title={post.frontmatter.title} />
       <main>
         <article>
           <header>
@@ -26,7 +29,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
           />
         </article>
       </main>
-    </div>
+    </Layout>
   );
 };
 export default BlogPostTemplate;
