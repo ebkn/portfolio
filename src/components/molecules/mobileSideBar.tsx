@@ -13,10 +13,10 @@ const MobileSideBar: React.FC<Props> = ({ open, toggleOpen }: Props) => (
     </IconWrapper>
     {open ? (
       <div>
-        <PcStyledLink href="/">Home</PcStyledLink>
-        <PcStyledLink href="/skills">Skills</PcStyledLink>
-        <PcStyledLink href="/works">Works</PcStyledLink>
-        <PcStyledLink href="/jobs">Jobs</PcStyledLink>
+        <PcStyledLink to="/">Home</PcStyledLink>
+        <PcStyledLink to="/skills">Skills</PcStyledLink>
+        <PcStyledLink to="/works">Works</PcStyledLink>
+        <PcStyledLink to="/jobs">Jobs</PcStyledLink>
       </div>
     ) : null}
   </StyledPcMenu>
