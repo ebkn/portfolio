@@ -63,5 +63,59 @@ module.exports = {
         precachePages: ['/blog/*'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'ebiken portfolio',
+        short_name: 'ebiken',
+        start_url: '/',
+        background_color: 'rgba(230, 230, 230, 1)',
+        theme_color: '#000000',
+        display: 'standalone',
+        icon: 'src/icon.jpg',
+        icons: [
+          {
+            'src': 'icons/icon-72x72.jpg',
+            'sizes': '72x72',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-96x96.jpg',
+            'sizes': '96x96',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-128x128.jpg',
+            'sizes': '128x128',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-144x144.jpg',
+            'sizes': '144x144',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-152x152.jpg',
+            'sizes': '152x152',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-192x192.jpg',
+            'sizes': '192x192',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-384x384.jpg',
+            'sizes': '384x384',
+            'type': 'image/jpg'
+          },
+          {
+            'src': 'icons/icon-512x512.jpg',
+            'sizes': '512x512',
+            'type': 'image/jpg'
+          },
+        ],
+      },
+    },
   ],
 };
