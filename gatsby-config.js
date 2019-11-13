@@ -49,5 +49,13 @@ module.exports = {
         fileName: 'types/graphql-types.d.ts',
       },
     },
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          { family: 'Source Code Pro' },
+        ],
+      },
+    },
   ],
 };
