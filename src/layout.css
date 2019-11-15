@@ -1,10 +1,5 @@
-:root {
-  /* color */
-  --bg-color: #FAFAFA;
-  --logo-color: #616161;
-  --title-color: #424242;
-  --text-color: #616161;
-  --sub-text-color: #757575;
+body {
+  background-color: var(--bg-color);
 
   /* font size */
   --title-size: 24px;
@@ -14,6 +9,18 @@
   --small-size: 12px;
 }
 
-body {
-  background-color: var(--bg-color);
+body.light {
+  --bg-color: #FAFAFA;
+  --logo-color: #616161;
+  --title-color: #424242;
+  --text-color: #616161;
+  --sub-text-color: #757575;
+}
+
+body.dark {
+  --bg-color: #424242;
+  --logo-color: #BDBDBD;
+  --title-color: #F5F5F5;
+  --text-color: #BDBDBD;
+  --sub-text-color: #9E9E9E;
 }
