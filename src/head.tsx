@@ -11,7 +11,7 @@ interface Props {
 }
 
 const query = graphql`
- query Site {
+  query Site {
     site {
       siteMetadata {
         title
@@ -28,10 +28,11 @@ const query = graphql`
 
 const Head: React.FC<Props> = ({ lang, meta = {}, title = '', description = '' }) => {
   const { site } = useStaticQuery<SiteQuery>(query);
+  if (!site) return null;
 
-  const metaTitle = title || site.siteMetadata.title;
-  const metaDescription = description || site.siteMetadata.description;
-  const { author, siteUrl, social } = site.siteMetadata;
+  const metaTitle = title || site?.siteMetadata?.title || '';
+  const metaDescription = description || site?.siteMetadata?.description || '';
+  const { author, siteUrl, social } = site?.siteMetadata;
 
   return (
     <Helmet
@@ -39,14 +40,14 @@ const Head: React.FC<Props> = ({ lang, meta = {}, title = '', description = '' }
         lang,
       }}
       title={metaTitle}
-      titleTemplate={`%s | ${metaTitle}`}
+      titleTemplate={`%s${!metaTitle ? ` | ${metaTitle}` : ''}`}
       meta={[
         { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-        { name: 'description', content: metaDescription },
-        { name: 'author', content: author },
+        { name: 'description', content: metaDescription || '' },
+        { name: 'author', content: author || '' },
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: social.twitter },
-        { property: 'og:url', content: siteUrl },
+        { name: 'twitter:site', content: social?.twitter || '' },
+        { property: 'og:url', content: siteUrl || '' },
         { property: 'og:title', content: metaTitle },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: metaTitle },

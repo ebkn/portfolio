@@ -21,18 +21,18 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
       <Head lang="ja" title="All posts" />
       <Container>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
+          const title = node.frontmatter?.title || node.fields?.slug;
           return (
-            <Article key={node.fields.slug}>
+            <Article key={node.fields?.slug}>
               <header>
-                <StyledLink to={node.fields.slug}>
+                <StyledLink to={node.fields?.slug}>
                   <SectionTitle title={title} />
                 </StyledLink>
-                <SmallText text={node.frontmatter.date} />
+                <SmallText text={node.frontmatter?.date} />
               </header>
               <section>
                 <BlogContent
-                  html={node.frontmatter.description || node.excerpt}
+                  html={node.frontmatter?.description || node.excerpt}
                 />
               </section>
             </Article>

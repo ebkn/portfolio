@@ -11,7 +11,7 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <Wrapper>
+   <Wrapper>
       <Container>
         <Header title="ebiken" />
         <Main>
