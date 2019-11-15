@@ -7,6 +7,7 @@ import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
 import BlogContent from '../components/molecules/blogContent';
+import { formatDate } from '../util';
 import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -29,7 +30,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
       <Container>
         <Header>
           <SectionTitle content={post.frontmatter?.title || ''} />
-          <SmallText text={post.frontmatter?.date || ''} />
+          <SmallText text={formatDate(post.frontmatter?.date)} />
         </Header>
         <section>
           <BlogContent html={post.html || ''} />
@@ -52,7 +53,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }

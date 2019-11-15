@@ -7,6 +7,7 @@ import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
 import BlogContent from '../components/molecules/blogContent';
+import { formatDate } from '../util';
 import { PageQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -28,7 +29,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
                 <StyledLink to={node.fields?.slug || ''}>
                   <SectionTitle content={title} />
                 </StyledLink>
-                <SmallText text={node.frontmatter?.date || ''} />
+                <SmallText text={formatDate(node.frontmatter?.date)} />
               </header>
               <section>
                 <BlogContent
@@ -68,7 +69,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date
             title
             description
           }
