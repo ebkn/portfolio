@@ -6,6 +6,7 @@ import Head from '../head';
 import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
+import BlogContent from '../components/molecules/blogContent';
 import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -23,9 +24,9 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
           <SectionTitle title={post.frontmatter.title} />
           <SmallText text={post.frontmatter.date} />
         </Header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line react/no-danger
-        />
+        <section>
+          <BlogContent html={post.html} />
+        </section>
       </Container>
     </Layout>
   );

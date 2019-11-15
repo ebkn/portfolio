@@ -6,6 +6,7 @@ import Head from '../head';
 import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
+import BlogContent from '../components/molecules/blogContent';
 import { PageQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -30,10 +31,8 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
                 <SmallText text={node.frontmatter.date} />
               </header>
               <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
+                <BlogContent
+                  html={node.frontmatter.description || node.excerpt}
                 />
               </section>
             </Article>
