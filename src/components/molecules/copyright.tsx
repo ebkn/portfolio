@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Text from '../atoms/text';
 
 const CopyRight: React.FC<{}> = () => (
-  <Wrapper>
+  <Footer>
     <Text text="&copy; 2018 Ebinuma Kenichi" />
-  </Wrapper>
+  </Footer>
 );
-const Wrapper: any = styled.div`
+const Footer = styled.footer`
   display: flex;
   width: 100%;
   justify-content: center;
