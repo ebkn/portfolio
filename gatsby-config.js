@@ -69,8 +69,8 @@ module.exports = {
         name: 'ebiken portfolio',
         short_name: 'ebiken',
         start_url: '/',
-        background_color: 'rgba(230, 230, 230, 1)',
-        theme_color: '#000000',
+        background_color: '#FAFAFA',
+        theme_color: '#616161',
         display: 'standalone',
         icon: 'src/icon.jpg',
         icons: [

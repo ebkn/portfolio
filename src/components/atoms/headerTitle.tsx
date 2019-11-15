@@ -11,6 +11,6 @@ const HeaderTitle: React.FC<Props> = ({ title }) => (
 export default HeaderTitle;
 
 const H1 = styled.h1`
-  font-size: 22px;
-  color: #757575;
+  font-size: var(--title-size);
+  color: var(--logo-color);
 `;
