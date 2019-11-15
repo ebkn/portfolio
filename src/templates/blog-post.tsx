@@ -34,7 +34,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
 export default BlogPostTemplate;
 
 const StyledHeader = styled.header`
-  padding: 20px 0;
+  padding: 10px 0;
 `;
 const StyledDate = styled.small`
   margin: 0;

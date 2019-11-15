@@ -28,5 +28,5 @@ const StyledContainer: any = styled.div`
 const StyledMain: any = styled.main`
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 20px;
 `;
