@@ -6,10 +6,9 @@
   "author": "ebkn <ktennis.mqekr12@gmail.com>",
   "private": true,
   "scripts": {
-    "typecheck": "tsc --noEmit",
     "lint": "eslint ./src/**/*.ts{x,}",
     "lint:fix": "npm run lint --fix",
-    "prebuild": "npm run typecheck && npm run lint",
+    "prebuild": "npm run lint",
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve"
@@ -51,7 +50,6 @@
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@types/react-helmet": "^5.0.14",
-    "@types/styled-components": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "babel-preset-gatsby": "^0.2.22",
