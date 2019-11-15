@@ -19,6 +19,7 @@
     "firebase": "^7.3.0",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
+    "gatsby-plugin-catch-links": "^2.1.17",
     "gatsby-plugin-graphql-codegen": "^2.0.1",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-offline": "^3.0.20",
