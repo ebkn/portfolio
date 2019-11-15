@@ -2330,7 +2330,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___fileName' |
   'pluginCreator___pluginOptions___fonts' |
   'pluginCreator___pluginOptions___fonts___family' |
-  'pluginCreator___pluginOptions___precachePages' |
+  'pluginCreator___pluginOptions___appendScript' |
   'pluginCreator___pluginOptions___short_name' |
   'pluginCreator___pluginOptions___start_url' |
   'pluginCreator___pluginOptions___background_color' |
@@ -2550,7 +2550,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___fileName' |
   'pluginOptions___fonts' |
   'pluginOptions___fonts___family' |
-  'pluginOptions___precachePages' |
+  'pluginOptions___appendScript' |
   'pluginOptions___short_name' |
   'pluginOptions___start_url' |
   'pluginOptions___background_color' |
@@ -2685,7 +2685,7 @@ export type SitePluginPluginOptions = {
   allExtensions?: Maybe<Scalars['Boolean']>,
   fileName?: Maybe<Scalars['String']>,
   fonts?: Maybe<Array<Maybe<SitePluginPluginOptionsFonts>>>,
-  precachePages?: Maybe<Array<Maybe<Scalars['String']>>>,
+  appendScript?: Maybe<Scalars['String']>,
   short_name?: Maybe<Scalars['String']>,
   start_url?: Maybe<Scalars['String']>,
   background_color?: Maybe<Scalars['String']>,
@@ -2708,7 +2708,7 @@ export type SitePluginPluginOptionsFilterInput = {
   allExtensions?: Maybe<BooleanQueryOperatorInput>,
   fileName?: Maybe<StringQueryOperatorInput>,
   fonts?: Maybe<SitePluginPluginOptionsFontsFilterListInput>,
-  precachePages?: Maybe<StringQueryOperatorInput>,
+  appendScript?: Maybe<StringQueryOperatorInput>,
   short_name?: Maybe<StringQueryOperatorInput>,
   start_url?: Maybe<StringQueryOperatorInput>,
   background_color?: Maybe<StringQueryOperatorInput>,

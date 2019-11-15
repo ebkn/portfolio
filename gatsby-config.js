@@ -77,7 +77,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
-        precachePages: ['/blog/*'],
+        appendScript: require.resolve('./src/sw.js'),
       },
     },
     {
