@@ -35,7 +35,7 @@ const Head: React.FC<Props> = ({ lang, meta = {}, siteTitle = '', description = 
 
   const tags: HelmetProps['meta'] = [
     { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-    { name: 'description', content: metaDescription || '' },
+    { name: 'Description', content: metaDescription || '' },
     { name: 'author', content: site?.siteMetadata?.author || '' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:site', content: site?.siteMetadata?.social?.twitter || '' },

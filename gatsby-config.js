@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'ebiken portfolio',
     author: 'ebiken',
-    description: '',
+    description: "ebiken's portfolio",
     siteUrl: 'https://portfolio.ebiken.dev',
     social: {
       twitter: '@ebikentennis',
