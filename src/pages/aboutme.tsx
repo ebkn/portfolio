@@ -14,7 +14,7 @@ const AboutMePage: React.FC<{}> = () => (
     <Head lang="ja" />
     <Container>
       <ProfileIcon fileName={info.icon} />
-      <SectionTitle title={info.name} alignCenter={true} />
+      <SectionTitle title={info.name} alignCenter />
       <SocialIcons links={info.links} />
       <Badges />
       <CenteredText text={info.shortProfile} />

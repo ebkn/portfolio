@@ -9,7 +9,9 @@ const JobsPage: React.FC<{}> = () => (
   <Layout>
     <Head lang="ja" title="jobs" />
     <Container>
-      {info.jobs.map(({ name, position, term, description }) => (
+      {info.jobs.map(({
+        name, position, term, description,
+      }) => (
         <Job name={name} position={position} term={term} description={description} key={name} />
       ))}
     </Container>

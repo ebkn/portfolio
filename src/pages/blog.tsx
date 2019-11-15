@@ -13,14 +13,14 @@ interface Props {
 }
 
 const BlogIndex: React.FC<Props> = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
       <Head lang="ja" title="All posts" />
       <Container>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          const title = node.frontmatter.title || node.fields.slug;
           return (
             <Article key={node.fields.slug}>
               <header>
@@ -37,7 +37,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
                 />
               </section>
             </Article>
-          )
+          );
         })}
       </Container>
     </Layout>
