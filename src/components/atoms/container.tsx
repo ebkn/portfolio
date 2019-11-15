@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
-  children: React.Children;
+  children: any;
 }
-const Container: React.FC<Props> = ({ children }: Props) => (
+const Container: React.FC<Props> = ({ children }) => (
   <Div>{children}</Div>
 );
 const Div = styled.div`

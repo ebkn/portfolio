@@ -15,17 +15,24 @@ interface Props {
 
 const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   const post = data.markdownRemark;
+  if (!post) {
+    return (
+      <Layout>
+        <Head lang="ja" />
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
-      <Head lang="ja" title={post.frontmatter.title} />
+      <Head lang="ja" siteTitle={post.frontmatter?.title || ''} />
       <Container>
         <Header>
-          <SectionTitle title={post.frontmatter.title} />
-          <SmallText text={post.frontmatter.date} />
+          <SectionTitle content={post.frontmatter?.title || ''} />
+          <SmallText text={post.frontmatter?.date || ''} />
         </Header>
         <section>
-          <BlogContent html={post.html} />
+          <BlogContent html={post.html || ''} />
         </section>
       </Container>
     </Layout>

@@ -2,11 +2,11 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
-  title: string;
+  content: string;
   alignCenter?: boolean;
 }
-const SectionTitle: React.FC<Props> = ({ title, alignCenter = false }: Props) => (
-  <H2 alignCenter={alignCenter}>{title}</H2>
+const SectionTitle: React.FC<Props> = ({ content, alignCenter = false }: Props) => (
+  <H2 alignCenter={alignCenter}>{content}</H2>
 );
 export default SectionTitle;
 

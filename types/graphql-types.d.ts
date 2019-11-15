@@ -1842,8 +1842,6 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1912,8 +1910,6 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars['Int']>,
-  host?: Maybe<Scalars['String']>,
   polyfill?: Maybe<Scalars['Boolean']>,
   pathPrefix?: Maybe<Scalars['String']>,
   buildTime?: Maybe<Scalars['Date']>,
@@ -2046,8 +2042,6 @@ export type SiteFieldsEnum =
   'siteMetadata___description' |
   'siteMetadata___siteUrl' |
   'siteMetadata___social___twitter' |
-  'port' |
-  'host' |
   'polyfill' |
   'pathPrefix' |
   'buildTime';
@@ -2058,8 +2052,6 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
@@ -2333,6 +2325,8 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___classPrefix' |
   'pluginCreator___pluginOptions___showLineNumbers' |
   'pluginCreator___pluginOptions___noInlineHighlight' |
+  'pluginCreator___pluginOptions___isTSX' |
+  'pluginCreator___pluginOptions___allExtensions' |
   'pluginCreator___pluginOptions___fileName' |
   'pluginCreator___pluginOptions___fonts' |
   'pluginCreator___pluginOptions___fonts___family' |
@@ -2551,6 +2545,8 @@ export type SitePluginFieldsEnum =
   'pluginOptions___classPrefix' |
   'pluginOptions___showLineNumbers' |
   'pluginOptions___noInlineHighlight' |
+  'pluginOptions___isTSX' |
+  'pluginOptions___allExtensions' |
   'pluginOptions___fileName' |
   'pluginOptions___fonts' |
   'pluginOptions___fonts___family' |
@@ -2685,6 +2681,8 @@ export type SitePluginPluginOptions = {
   classPrefix?: Maybe<Scalars['String']>,
   showLineNumbers?: Maybe<Scalars['Boolean']>,
   noInlineHighlight?: Maybe<Scalars['Boolean']>,
+  isTSX?: Maybe<Scalars['Boolean']>,
+  allExtensions?: Maybe<Scalars['Boolean']>,
   fileName?: Maybe<Scalars['String']>,
   fonts?: Maybe<Array<Maybe<SitePluginPluginOptionsFonts>>>,
   precachePages?: Maybe<Array<Maybe<Scalars['String']>>>,
@@ -2706,6 +2704,8 @@ export type SitePluginPluginOptionsFilterInput = {
   classPrefix?: Maybe<StringQueryOperatorInput>,
   showLineNumbers?: Maybe<BooleanQueryOperatorInput>,
   noInlineHighlight?: Maybe<BooleanQueryOperatorInput>,
+  isTSX?: Maybe<BooleanQueryOperatorInput>,
+  allExtensions?: Maybe<BooleanQueryOperatorInput>,
   fileName?: Maybe<StringQueryOperatorInput>,
   fonts?: Maybe<SitePluginPluginOptionsFontsFilterListInput>,
   precachePages?: Maybe<StringQueryOperatorInput>,

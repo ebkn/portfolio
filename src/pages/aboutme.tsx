@@ -11,10 +11,10 @@ import info from '../info';
 
 const AboutMePage: React.FC<{}> = () => (
   <Layout>
-    <Head lang="ja" />
+    <Head lang="ja" siteTitle="ABOUT ME" />
     <Container>
       <ProfileIcon fileName={info.icon} />
-      <SectionTitle title={info.name} alignCenter />
+      <SectionTitle content={info.name} alignCenter />
       <SocialIcons links={info.links} />
       <Badges />
       <CenteredText text={info.shortProfile} />

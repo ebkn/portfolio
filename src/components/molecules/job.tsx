@@ -13,7 +13,7 @@ interface Props {
 
 const Job: React.FC<Props> = ({ name, position, term, description }: Props) => (
   <Section>
-    <SectionTitle title={name} />
+    <SectionTitle content={name} />
     <SubInfoWrapper>
       <Text text={position} />
       <SubInfoSpace />

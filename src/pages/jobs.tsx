@@ -7,7 +7,7 @@ import info from '../info';
 
 const JobsPage: React.FC<{}> = () => (
   <Layout>
-    <Head lang="ja" title="jobs" />
+    <Head lang="ja" siteTitle="JOBS" />
     <Container>
       {info.jobs.map(({
         name, position, term, description,

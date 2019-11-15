@@ -6,7 +6,7 @@ import Title from '../components/atoms/title';
 
 const NotFoundPage: React.FC<{}> = () => (
   <Layout>
-    <Head lang="ja" title="not found" />
+    <Head lang="ja" siteTitle="NOT FOUND" />
     <TextWrapper>
       <Title title="404 NOT FOUND" />
     </TextWrapper>
