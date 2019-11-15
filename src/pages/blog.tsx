@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
-import Title from '../components/atoms/title';
 import BlogSubTitle from '../components/atoms/blogSubTitle';
 import { PageQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
@@ -19,7 +18,6 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
     <Layout>
       <Head lang="ja" title="All posts" />
       <Container>
-        <Title title="BLOG" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -50,7 +48,7 @@ const StyledArticle = styled.article`
   width: 100%;
   box-sizing: border-box;
   padding: 10px 0;
-`
+`;
 const StyledHeader = styled.header`
   width: 100%;
   box-sizing: border-box;
