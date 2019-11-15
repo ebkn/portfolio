@@ -9,12 +9,7 @@ interface Props {
   term: string;
   description: string;
 }
-const Job: React.FC<Props> = ({
-  name,
-  position,
-  term,
-  description,
-}: Props) => (
+const Job: React.FC<Props> = ({ name, position, term, description }: Props) => (
   <StyledWrapper>
     <SubTitle title={name} />
     <SubInfoWrapper>
