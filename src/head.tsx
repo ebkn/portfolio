@@ -26,7 +26,12 @@ const query = graphql`
   }
 `;
 
-const Head: React.FC<Props> = ({ lang, meta = {}, siteTitle = '', description = '' }) => {
+const Head: React.FC<Props> = ({
+  lang,
+  meta = {},
+  siteTitle = '',
+  description = '',
+}) => {
   const { site } = useStaticQuery<SiteQuery>(query);
   if (!site) return <Helmet />;
 

@@ -16,5 +16,5 @@ const H2: any = styled.h2`
   padding: 15px 0 10px 0;
   font-size: var(--section-title-size);
   color: var(--title-color);
-  text-align: ${({ alignCenter }: H2Props) => alignCenter ? 'center': 'left'};
+  text-align: ${({ alignCenter }: H2Props) => (alignCenter ? 'center' : 'left')};
 `;

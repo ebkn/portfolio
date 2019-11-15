@@ -9,19 +9,17 @@ interface Props {
   children: any;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
-  return (
-   <Wrapper>
-      <Container>
-        <Header title="ebiken" />
-        <Main>
-          {children}
-          <Copyright />
-        </Main>
-      </Container>
-    </Wrapper>
-  );
-};
+const Layout: React.FC<Props> = ({ children }) => (
+  <Wrapper>
+    <Container>
+      <Header title="ebiken" />
+      <Main>
+        {children}
+        <Copyright />
+      </Main>
+    </Container>
+  </Wrapper>
+);
 export default Layout;
 
 const Wrapper = styled.div`

@@ -11,7 +11,12 @@ interface Props {
   description: string;
 }
 
-const Job: React.FC<Props> = ({ name, position, term, description }: Props) => (
+const Job: React.FC<Props> = ({
+  name,
+  position,
+  term,
+  description,
+}: Props) => (
   <Section>
     <SectionTitle content={name} />
     <SubInfoWrapper>

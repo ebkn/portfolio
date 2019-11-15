@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+
 import * as React from 'react';
 
 interface Props {
@@ -10,7 +12,7 @@ interface Props {
 }
 
 const HTML = (props: Props) => (
-  <html {...props.htmlAttributes}>
+  <html lang="ja" {...props.htmlAttributes}>
     <head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -22,9 +24,15 @@ const HTML = (props: Props) => (
       <noscript key="noscript" id="gatsby-noscript">
         This app works best with JavaScript enabled.
       </noscript>
-      <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
+      <div
+        key="body"
+        id="___gatsby"
+        dangerouslySetInnerHTML={{ __html: props.body }} // eslint-disable-line react/no-danger
+      />
       {props.postBodyComponents}
     </body>
   </html>
 );
 export default HTML;
+
+/* eslint-enable react/destructuring-assignment */
