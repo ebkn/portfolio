@@ -11,29 +11,29 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <StyledWrapper>
-      <StyledContainer>
+    <Wrapper>
+      <Container>
         <Header title="ebiken" />
-        <StyledMain>
+        <Main>
           {children}
           <Copyright />
-        </StyledMain>
-      </StyledContainer>
-    </StyledWrapper>
+        </Main>
+      </Container>
+    </Wrapper>
   );
 };
 export default Layout;
 
-const StyledWrapper = styled.div`
+const Wrapper = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
 `;
-const StyledContainer = styled.div`
+const Container = styled.div`
   width: 100%;
   max-width: 680px;
 `;
-const StyledMain = styled.main`
+const Main = styled.main`
   width: 100%;
   box-sizing: border-box;
   padding: 20px;

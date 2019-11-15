@@ -8,15 +8,15 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ title }) => (
-  <StyledHeaderContainer>
+  <HeaderContainer>
     <StyledLink to="/">
       <HeaderTitle title={title} />
     </StyledLink>
-  </StyledHeaderContainer>
+  </HeaderContainer>
 );
 export default Header;
 
-const StyledHeaderContainer = styled.header`
+const HeaderContainer = styled.header`
   display: flex;
   width: 100%;
   box-sizing: border-box;

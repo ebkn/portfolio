@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import SubTitle from '../atoms/subTitle';
+import SectionTitle from '../atoms/sectionTitle';
+import Text from '../atoms/text';
+import SmallText from '../atoms/smallText';
 
 interface Props {
   name: string;
@@ -8,28 +10,30 @@ interface Props {
   term: string;
   description: string;
 }
+
 const Job: React.FC<Props> = ({ name, position, term, description }: Props) => (
   <Section>
-    <SubTitle title={name} />
-    <Term>{term}</Term>
-    <Position>{position}</Position>
-    <P>{description}</P>
+    <SectionTitle title={name} />
+    <SubInfoWrapper>
+      <Text text={position} />
+      <SubInfoSpace />
+      <SmallText text={term} />
+    </SubInfoWrapper>
+    <Text text={description} />
   </Section>
 );
+export default Job;
+
 const Section = styled.section`
   padding: 25px 0;
 `;
-const Term = styled.small`
-  margin: 0;
-  font-size: 12px;
-  color: #424242;
+const SubInfoWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 15px;
 `;
-const Position = styled.p`
-  font-size: 13px;
-  color: #424242;
+const SubInfoSpace = styled.div`
+  width: 10px;
 `;
-const P = styled.p`
-  font-size: 15px;
-  color: #424242;
-`;
-export default Job;

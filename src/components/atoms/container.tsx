@@ -5,9 +5,9 @@ interface Props {
   children: React.Children;
 }
 const Container: React.FC<Props> = ({ children }: Props) => (
-  <StyledDiv>{children}</StyledDiv>
+  <Div>{children}</Div>
 );
-const StyledDiv: any = styled.div`
+const Div = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;

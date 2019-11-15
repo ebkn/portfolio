@@ -7,14 +7,14 @@ import Title from '../components/atoms/title';
 const NotFoundPage: React.FC<{}> = () => (
   <Layout>
     <Head lang="ja" title="not found" />
-    <StyledWrapper>
+    <TextWrapper>
       <Title title="404 NOT FOUND" />
-    </StyledWrapper>
+    </TextWrapper>
   </Layout>
 );
 export default NotFoundPage;
 
-const StyledWrapper: any = styled.div`
+const TextWrapper: any = styled.div`
   padding: 100px 0;
   display: flex;
   justify-content: center;

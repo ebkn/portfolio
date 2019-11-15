@@ -9,7 +9,7 @@ interface Props {
 const SocialIcon: React.FC<Props> = ({ url, name, icon }: Props) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank" rel="noopener">
-      <StyledImg src={`/images/${icon}`} alt={name} />
+      <Img src={`/images/${icon}`} alt={name} />
     </StyledLink>
   </IconWrapper>
 );
@@ -23,7 +23,7 @@ const StyledLink: any = styled.a`
   text-decoration: none;
   cursor: pointer;
 `;
-const StyledImg: any = styled.img`
+const Img: any = styled.img`
   width: 30px;
   height: 30px;
   border-radius: 15px;

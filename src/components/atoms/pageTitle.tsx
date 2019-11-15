@@ -9,7 +9,7 @@ interface Props {
 
 const PageTitle: React.FC<Props> = ({ title, to }) => (
   <StyledLink to={to}>
-    <StyledTitle>{title}</StyledTitle>
+    <H2>{title}</H2>
   </StyledLink>
 );
 export default PageTitle;
@@ -22,8 +22,7 @@ const StyledLink = styled(Link)`
   box-sizing: border-box;
   text-decoration: none;
 `;
-
-const StyledTitle = styled.h2`
-  font-size: 20px;
-  color: #616161;
+const H2 = styled.h2`
+  font-size: var(--page-title-size);
+  color: var(--title-color);
 `;

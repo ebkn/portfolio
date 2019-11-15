@@ -6,11 +6,11 @@ interface Props {
 }
 
 const HeaderTitle: React.FC<Props> = ({ title }) => (
-  <StyledH1>{title}</StyledH1>
+  <H1>{title}</H1>
 );
 export default HeaderTitle;
 
-const StyledH1 = styled.h1`
+const H1 = styled.h1`
   font-size: 22px;
   color: #757575;
 `;

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
-import BlogTitle from '../components/atoms/blogTitle';
+import SectionTitle from '../components/atoms/sectionTitle';
+import SmallText from '../components/atoms/smallText';
 import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
 
 interface Props {
@@ -18,12 +19,10 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
     <Layout>
       <Head lang="ja" title={post.frontmatter.title} />
       <Container>
-        <StyledHeader>
-          <BlogTitle title={post.frontmatter.title} />
-          <StyledDate>
-            {post.frontmatter.date}
-          </StyledDate>
-        </StyledHeader>
+        <Header>
+          <SectionTitle title={post.frontmatter.title} />
+          <SmallText text={post.frontmatter.date} />
+        </Header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line react/no-danger
         />
@@ -33,13 +32,8 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
 };
 export default BlogPostTemplate;
 
-const StyledHeader = styled.header`
+const Header = styled.header`
   padding: 10px 0;
-`;
-const StyledDate = styled.small`
-  margin: 0;
-  font-size: 13px;
-  color: #424242;
 `;
 
 export const pageQuery = graphql`

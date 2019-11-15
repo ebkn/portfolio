@@ -5,17 +5,15 @@ interface Props {
   text: string;
 }
 
-const Text: React.FC<Props> = ({ text }: Props) => (
+const SmallText: React.FC<Props> = ({ text }: Props) => (
   <P>{text}</P>
 );
-export default Text;
+export default SmallText;
 
 const P = styled.p`
-  box-sizing: border-box;
   margin: 0;
-  padding: 5px 0;
-  font-size: var(--normal-size);
+  font-size: var(--small-size);
   line-height: 24px;
+  color: var(--sub-text-color);
   word-break: break-word;
-  color: var(--text-color);
 `;
