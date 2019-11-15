@@ -35,7 +35,7 @@ const StyledPcMenu: any = styled.div`
 `;
 const IconWrapper: any = styled.div`
   position: ${({ open }: MenuProps) => open ? 'fixed' : 'absolute'};
-  width: 100%;
+  box-sizing: border-box;
   height: 20px;
   padding: 25px 10px;
   display: flex;

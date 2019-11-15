@@ -30,13 +30,13 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
                 </StyledLink>
                 <StyledDate>{node.frontmatter.date}</StyledDate>
               </StyledHeader>
-              <section>
+              <StyledSection>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-              </section>
+              </StyledSection>
             </StyledArticle>
           )
         })}
@@ -47,9 +47,13 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
 export default BlogIndex;
 
 const StyledArticle = styled.article`
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 0;
 `
 const StyledHeader = styled.header`
+  width: 100%;
+  box-sizing: border-box;
   padding: 3px 0;
 `;
 const StyledDate = styled.small`
@@ -59,6 +63,10 @@ const StyledDate = styled.small`
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+const StyledSection = styled.section`
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 export const pageQuery = graphql`
