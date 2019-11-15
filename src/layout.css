@@ -1,3 +1,18 @@
+:root {
+  /* color */
+  --bg-color: #FAFAFA;
+  --title-color: #616161;
+  --text-color: #424242;
+  --sub-text-color: #757575;
+
+  /* font size */
+  --title-size: 24px;
+  --page-title-size: 26px;
+  --section-title-size: 22px;
+  --normal-size: 16px;
+  --small-size: 12px;
+}
+
 body {
-  background-color: #FAFAFA;
+  background-color: var(--bg-color);
 }
