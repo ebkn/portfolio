@@ -7,12 +7,12 @@ interface Props {
   to: string;
 }
 
-const PageLink: React.FC<Props> = ({ title, to }) => (
+const PageTitle: React.FC<Props> = ({ title, to }) => (
   <StyledLink to={to}>
     <StyledTitle>{title}</StyledTitle>
   </StyledLink>
 );
-export default PageLink;
+export default PageTitle;
 
 const StyledLink = styled(Link)`
   width: 100%;
