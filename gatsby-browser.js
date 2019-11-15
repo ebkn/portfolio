@@ -2,6 +2,8 @@ const firebase = require('firebase/app');
 require('firebase/analytics');
 require('firebase/performance');
 
+require('prismjs/themes/prism-solarizedlight.css');
+
 export const onClientEntry = () => {
   const firebaseConfig = {
     apiKey: 'AIzaSyC5vsB3ECXxMcLSTiaEhmYKkke0z8XEE0s',
