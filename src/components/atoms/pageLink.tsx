@@ -16,7 +16,7 @@ export default PageLink;
 
 const StyledLink = styled(Link)`
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
   box-sizing: border-box;

@@ -18,11 +18,10 @@ export default Header;
 
 const StyledHeaderContainer = styled.header`
   display: flex;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  padding: 20px 25px 0 25px;
+  padding: 30px 25px 10px 25px;
 `;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
