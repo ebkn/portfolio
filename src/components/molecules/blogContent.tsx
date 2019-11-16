@@ -47,6 +47,7 @@ const Content = styled.div`
   ul,ol {
     li {
       padding: 5px 0;
+      color: var(--text-color);
 
       p {
         margin: 0;
@@ -72,6 +73,14 @@ const Content = styled.div`
       word-break: break-word;
       color: var(--sub-text-color);
     }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table {
+    color: var(--text-color);
   }
 
   .gatsby-highlight {
