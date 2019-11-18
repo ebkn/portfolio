@@ -8,11 +8,15 @@ interface Props {
   title: string;
 }
 
+type DarkModeToggleElement = Element & {
+  mode: 'dark' | 'light';
+}
+
 const Header: React.FC<Props> = ({ title }) => {
   React.useEffect(() => {
-    if (!document) return;
+    if (typeof window === 'undefined') return;
 
-    const toggle = document.querySelector('dark-mode-toggle');
+    const toggle = document.querySelector('dark-mode-toggle') as DarkModeToggleElement | null;
     if (!toggle) return;
 
     const { body } = document;
