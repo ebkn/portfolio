@@ -20,5 +20,5 @@ const P = styled.p`
   line-height: 24px;
   word-break: break-word;
   color: var(--text-color);
-  text-align: ${({ alignCenter }): PProps => alignCenter ? 'center' : 'left'};
+  text-align: ${({ alignCenter }: PProps) => (alignCenter ? 'center' : 'left')};
 `;
