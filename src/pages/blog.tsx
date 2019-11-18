@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
-import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
@@ -18,7 +17,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout>
+    <React.Fragment>
       <Head lang="ja" siteTitle="BLOG" />
       <Container>
         {posts.map(({ node }, i) => {
@@ -40,7 +39,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
           );
         })}
       </Container>
-    </Layout>
+    </React.Fragment>
   );
 };
 export default BlogIndex;

@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
 import Job from '../components/molecules/job';
 import info from '../info';
 
 const JobsPage: React.FC<{}> = () => (
-  <Layout>
+  <React.Fragment>
     <Head lang="ja" siteTitle="JOBS" />
     <Container>
       {info.jobs.map(({
@@ -15,6 +14,6 @@ const JobsPage: React.FC<{}> = () => (
         <Job name={name} position={position} term={term} description={description} key={name} />
       ))}
     </Container>
-  </Layout>
+  </React.Fragment>
 );
 export default JobsPage;

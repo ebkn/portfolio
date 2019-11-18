@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
 import ProfileIcon from '../components/atoms/profileIcon';
@@ -10,7 +9,7 @@ import CenteredText from '../components/molecules/centeredText';
 import info from '../info';
 
 const AboutMePage: React.FC<{}> = () => (
-  <Layout>
+  <React.Fragment>
     <Head lang="ja" siteTitle="ABOUT ME" />
     <Container>
       <ProfileIcon fileName={info.icon} />
@@ -19,6 +18,6 @@ const AboutMePage: React.FC<{}> = () => (
       <Badges />
       <CenteredText text={info.shortProfile} />
     </Container>
-  </Layout>
+  </React.Fragment>
 );
 export default AboutMePage;

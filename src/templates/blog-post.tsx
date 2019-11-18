@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Layout from '../layout';
 import Head from '../head';
 import Container from '../components/atoms/container';
 import SectionTitle from '../components/atoms/sectionTitle';
@@ -17,15 +16,11 @@ interface Props {
 const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   const post = data.markdownRemark;
   if (!post) {
-    return (
-      <Layout>
-        <Head lang="ja" />
-      </Layout>
-    );
+    return <Head lang="ja" />;
   }
 
   return (
-    <Layout>
+    <React.Fragment>
       <Head lang="ja" siteTitle={post.frontmatter?.title || ''} />
       <Container>
         <Header>
@@ -36,7 +31,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
           <BlogContent html={post.html || ''} />
         </section>
       </Container>
-    </Layout>
+    </React.Fragment>
   );
 };
 export default BlogPostTemplate;
