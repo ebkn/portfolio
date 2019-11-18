@@ -2,57 +2,20 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import HeaderTitle from '../atoms/headerTitle';
-import '../../../node_modules/dark-mode-toggle';
+import DarkModeToggle from '../atoms/darkModeToggle';
 
 interface Props {
   title: string;
 }
 
-type DarkModeToggleElement = Element & {
-  mode: 'dark' | 'light';
-}
-
-const Header: React.FC<Props> = ({ title }) => {
-  React.useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const toggle = document.querySelector('dark-mode-toggle') as DarkModeToggleElement | null;
-    if (!toggle) return;
-
-    const { body } = document;
-
-    if (toggle.mode === 'dark') {
-      body.classList.add('dark');
-      body.classList.remove('light');
-    } else {
-      body.classList.add('light');
-      body.classList.remove('dark');
-    }
-
-    toggle.addEventListener('colorschemechange', () => {
-      body.classList.toggle('dark', toggle.mode === 'dark');
-      body.classList.toggle('light', toggle.mode === 'light');
-    });
-  }, []);
-
-  return (
-    <HeaderContainer>
-      <StyledLink to="/">
-        <HeaderTitle title={title} />
-      </StyledLink>
-      <ToggleWrapper
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{
-          __html: `
-            <dark-mode-toggle
-              id="dark-mode-toggle-1"
-              appearance="toggle"
-            />`,
-        }}
-      />
-    </HeaderContainer>
-  );
-};
+const Header: React.FC<Props> = ({ title }) => (
+  <HeaderContainer>
+    <StyledLink to="/">
+      <HeaderTitle title={title} />
+    </StyledLink>
+    <DarkModeToggle />
+  </HeaderContainer>
+);
 export default Header;
 
 const HeaderContainer = styled.header`
@@ -65,8 +28,4 @@ const HeaderContainer = styled.header`
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-const ToggleWrapper = styled.div`
-  box-sizing: border-box;
-  padding: 0 25px;
 `;
