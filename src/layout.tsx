@@ -42,9 +42,9 @@ body {
   background-color: var(--bg-color);
 
   /* main font size */
-  --title-size: 24px;
-  --page-title-size: 26px;
+  --title-size: 22px;
   --section-title-size: 26px;
+  --page-title-size: 20px;
   --normal-size: 16px;
   --small-size: 12px;
   /* blog font size */

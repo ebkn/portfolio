@@ -15,14 +15,13 @@ const PageTitle: React.FC<Props> = ({ title, to }) => (
 export default PageTitle;
 
 const StyledLink = styled(Link)`
-  width: 100%;
-  padding: 40px 0;
   display: flex;
+  padding: 0 15px;
   justify-content: center;
   box-sizing: border-box;
   text-decoration: none;
 `;
 const H2 = styled.h2`
   font-size: var(--page-title-size);
-  color: var(--title-color);
+  color: var(--logo-color);
 `;
