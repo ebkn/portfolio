@@ -4,8 +4,7 @@ import Container from '../components/atoms/container';
 import ProfileIcon from '../components/atoms/profileIcon';
 import SectionTitle from '../components/atoms/sectionTitle';
 import SocialIcons from '../components/molecules/socialIcons';
-import Badges from '../components/molecules/badges';
-import CenteredText from '../components/molecules/centeredText';
+import Text from '../components/atoms/text';
 import info from '../info';
 
 const AboutMePage: React.FC<{}> = () => (
@@ -15,8 +14,7 @@ const AboutMePage: React.FC<{}> = () => (
       <ProfileIcon fileName={info.icon} />
       <SectionTitle content={info.name} alignCenter />
       <SocialIcons links={info.links} />
-      <Badges />
-      <CenteredText text={info.shortProfile} />
+      <Text text={info.shortProfile} alignCenter />
     </Container>
   </React.Fragment>
 );

@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 interface Props {
   text: string;
+  alignCenter?: boolean;
 }
 
-const Text: React.FC<Props> = ({ text }: Props) => (
-  <P>{text}</P>
+const Text: React.FC<Props> = ({ text, alignCenter = false }) => (
+  <P alignCenter={alignCenter}>{text}</P>
 );
 export default Text;
 
+type PProps = { alignCenter: boolean };
 const P = styled.p`
   box-sizing: border-box;
   margin: 0;
@@ -18,4 +20,5 @@ const P = styled.p`
   line-height: 24px;
   word-break: break-word;
   color: var(--text-color);
+  text-align: ${({ alignCenter }): PProps => alignCenter ? 'center' : 'left'};
 `;

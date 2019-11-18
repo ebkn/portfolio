@@ -14,11 +14,11 @@ const Wrapper: any = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 50px 0;
+  padding: 30px 0;
 `;
 const Img: any = styled.img`
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
 `;
 export default ProfileIcon;

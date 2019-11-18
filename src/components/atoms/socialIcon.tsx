@@ -24,8 +24,8 @@ const StyledLink: any = styled.a`
   cursor: pointer;
 `;
 const Img: any = styled.img`
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 `;
 export default SocialIcon;
