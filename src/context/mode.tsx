@@ -25,8 +25,6 @@ const storeModeToStorage = (mode: Mode): void => {
 const getInitialMode = (): Mode => {
   if (typeof window === 'undefined') return LIGHT;
 
-  console.log('getInitial')
-
   const storedMode = getModeFromStorage();
   if (storedMode !== null) {
     return storedMode as Mode;
@@ -49,9 +47,6 @@ const ModeContextProvider: React.FC<Props> = ({ children }) => {
   React.useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    console.log('mode', mode)
-    console.log('effect')
-
     const { body } = document;
 
     switch (mode) { // eslint-disable-line
@@ -64,7 +59,7 @@ const ModeContextProvider: React.FC<Props> = ({ children }) => {
         body.classList.remove(LIGHT);
     }
     storeModeToStorage(mode);
-  }, []);
+  }, [mode]);
 
   const toggleMode = (): void => {
     switch (mode) { // eslint-disable-line

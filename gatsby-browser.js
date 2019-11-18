@@ -1,3 +1,6 @@
+import React from 'react';
+import { ModeContextProvider } from './src/context/mode';
+
 const firebase = require('firebase/app');
 require('firebase/analytics');
 require('firebase/performance');
@@ -26,3 +29,7 @@ export const onServiceWorkerUpdateReady = () => {
     window.location.reload();
   }
 };
+
+export const wrapRootElement = ({ element }) => (
+  <ModeContextProvider>{element}</ModeContextProvider>
+);
