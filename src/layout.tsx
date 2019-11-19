@@ -40,6 +40,7 @@ const Main = styled.main`
 const GlobalStyle = createGlobalStyle`
 body {
   background-color: var(--bg-color);
+  font-family: 'ヒラギノ角ゴ Pro W3','ヒラギノ角ゴ W3', 'メイリオ', 'ＭＳ Ｐゴシック',sans-serif;
 
   /* main font size */
   --title-size: 22px;
