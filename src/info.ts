@@ -7,7 +7,10 @@ export default {
       type: 'GitHub',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
-      icon: 'github_logo.png',
+      icon: {
+        light: 'github_logo-light.png',
+        dark: 'github_logo-dark.png',
+      },
     },
     {
       type: 'Twitter',

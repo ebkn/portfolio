@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { ModeContext, ModeContextType } from '../../context/mode';
+import { ModeToggleContext, ModeToggleContextType } from '../../context/mode';
 
 const imageURL = '/images/dark-mode-toggle.svg';
 
 const DarkModeToggle: React.FC<{}> = () => {
-  const toggleMode = React.useContext<ModeContextType>(ModeContext);
+  const toggleMode = React.useContext<ModeToggleContextType>(ModeToggleContext);
 
   return (
     <Wrapper onClick={toggleMode}>
