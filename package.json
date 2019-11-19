@@ -11,7 +11,8 @@
     "prebuild": "npm run lint",
     "build": "gatsby build",
     "start": "gatsby develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "create-blog": "sh create-new-blog.sh"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
