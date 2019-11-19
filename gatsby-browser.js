@@ -34,6 +34,6 @@ export const onServiceWorkerUpdateReady = () => {
 export const wrapRootElement = ({ element }) => (
   <ModeContextProvider>{element}</ModeContextProvider>
 );
-export const wrapPageElement = ({ element, props }) => (
-  <Layout {...props}>{element}</Layout>
+export const wrapPageElement = ({ element }) => (
+  <Layout>{element}</Layout>
 );
