@@ -7,7 +7,6 @@
     "allowJs": true,
     "lib": ["es6", "dom"],
     "jsx": "react",
-    "jsxFactory": "h",
     "strict": true,
     "noImplicitAny": true,
     "removeComments": false

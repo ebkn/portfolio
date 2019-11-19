@@ -1,27 +1,19 @@
-import { h, FunctionComponent } from 'preact';
-import Container from '../atoms/container';
-import Title from '../atoms/title';
-import Job from '../molecules/job';
+import * as React from 'react';
+import Head from '../head';
+import Container from '../components/atoms/container';
+import Job from '../components/molecules/job';
 import info from '../info';
 
-/** @jsx h */
-const JobsPage: FunctionComponent<{}> = () => (
-  <Container>
-    <Title title="JOBS" />
-    {info.jobs.map(({
-      name,
-      position,
-      term,
-      description,
-    }) => (
-      <Job
-        name={name}
-        position={position}
-        term={term}
-        description={description}
-        key={name}
-      />
-    ))}
-  </Container>
+const JobsPage: React.FC<{}> = () => (
+  <>
+    <Head lang="ja" siteTitle="JOBS" />
+    <Container>
+      {info.jobs.map(({
+        name, position, term, description,
+      }) => (
+        <Job name={name} position={position} term={term} description={description} key={name} />
+      ))}
+    </Container>
+  </>
 );
 export default JobsPage;

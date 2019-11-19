@@ -1,13 +1,16 @@
 export default {
-  name: 'Ebinuma Kenichi (ebiken)',
+  name: 'Ebinuma Kenichi',
   icon: 'avatar.jpg',
-  shortProfile: 'Software engineer / I love tennis, watching movies, and programming.',
+  shortProfile: 'Software engineer / I love tennis, movies, and programming.',
   links: [
     {
       type: 'GitHub',
       url: 'https://github.com/ebkn',
       name: 'ebkn',
-      icon: 'github_logo.png',
+      icon: {
+        light: 'github_logo-light.png',
+        dark: 'github_logo-dark.png',
+      },
     },
     {
       type: 'Twitter',
@@ -22,35 +25,21 @@ export default {
       icon: 'scrapbox_logo.png',
     },
   ],
-  skills: {
-    programming: [
-    ],
-    language: [
-    ],
-  },
-  works: [
-  ],
   jobs: [
     {
-      name: 'STELLA, Inc.',
-      position: 'Backend/Infra Engineer',
+      name: 'STELLA Inc.',
+      position: 'Backend/Infrastructure Engineer',
       term: '2018/8~',
-      description: 'Go, Node.js, AWS(ECS,Fargate,SNS), GraphQL, MySQL, Redis',
+      description: 'Go, Node.js, AWS(ECS,Fargate,SNS, etc.), GraphQL, MySQL, Redis',
     },
     {
       name: 'playground Co,. Ltd.',
-      position: 'Engineer intern',
+      position: 'Software Engineer intern',
       term: '2017/7~2018/11',
       description: 'Rails, Angular, MySQL, Redis',
     },
     {
-      name: 'freee K.K',
-      position: 'Engineer intern',
-      term: '2018/8 (2 weeks)',
-      description: 'Rails, React',
-    },
-    {
-      name: 'div inc.',
+      name: 'div Inc.',
       position: 'TECH::CAMP mentor',
       term: '2017/4~2019/4',
       description: 'web application mentor (Rails, JavaScript)',
