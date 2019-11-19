@@ -8,7 +8,7 @@ import Text from '../components/atoms/text';
 import info from '../info';
 
 const IndexPage: React.FC<{}> = () => (
-  <React.Fragment>
+  <>
     <Head lang="ja" />
     <Container>
       <ProfileIcon fileName={info.icon} />
@@ -16,6 +16,6 @@ const IndexPage: React.FC<{}> = () => (
       <Text text={info.shortProfile} alignCenter />
       <SocialIcons links={info.links} />
     </Container>
-  </React.Fragment>
+  </>
 );
 export default IndexPage;

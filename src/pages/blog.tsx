@@ -17,7 +17,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <React.Fragment>
+    <>
       <Head lang="ja" siteTitle="BLOG" />
       <Container>
         {posts.map(({ node }, i) => {
@@ -39,7 +39,7 @@ const BlogIndex: React.FC<Props> = ({ data }) => {
           );
         })}
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 export default BlogIndex;

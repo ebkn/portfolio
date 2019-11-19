@@ -9,25 +9,25 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => (
-  <Wrapper>
+  <LayoutWrapper>
     <GlobalStyle />
-    <Container>
+    <LayoutContainer>
       <Header title="ebiken" />
       <Main>
         {children}
         <Copyright />
       </Main>
-    </Container>
-  </Wrapper>
+    </LayoutContainer>
+  </LayoutWrapper>
 );
 export default Layout;
 
-const Wrapper = styled.div`
+const LayoutWrapper = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
 `;
-const Container = styled.div`
+const LayoutContainer = styled.div`
   width: 100%;
   max-width: 680px;
 `;

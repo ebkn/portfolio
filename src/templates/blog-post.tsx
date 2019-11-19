@@ -20,7 +20,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Head lang="ja" siteTitle={post.frontmatter?.title || ''} />
       <Container>
         <Header>
@@ -31,7 +31,7 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
           <BlogContent html={post.html || ''} />
         </section>
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 export default BlogPostTemplate;

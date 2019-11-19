@@ -6,17 +6,17 @@ interface Props {
 }
 
 const ProfileIcon: React.FC<Props> = ({ fileName }) => (
-  <Wrapper>
+  <Container>
     <Img src={`/images/${fileName}`} alt="avatar" />
-  </Wrapper>
+  </Container>
 );
-const Wrapper: any = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 30px 0;
 `;
-const Img: any = styled.img`
+const Img = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 35px;

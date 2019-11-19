@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface Props {
   text: string;
-  alignCenter: boolean;
+  alignCenter?: boolean;
 }
 
 const SmallText: React.FC<Props> = ({ text, alignCenter = false }) => (
