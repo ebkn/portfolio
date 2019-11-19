@@ -12,13 +12,14 @@ export default BlogContent;
 
 const Content = styled.div`
   padding: 20px 0;
+  color: var(--text-color);
 
   h1,h2,h3,h4,h5,h6 {
-      margin: 0;
-      padding: 30px 0 10px 0;
-      line-height: 30px;
-      word-break: break-word;
-      color: var(--title-color);
+    margin: 0;
+    padding: 30px 0 10px 0;
+    line-height: 30px;
+    word-break: break-word;
+    color: var(--title-color);
   }
   h1 { font-size: var(--blog-h1-size); }
   h2 { font-size: var(--blog-h2-size); }
