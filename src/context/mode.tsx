@@ -5,9 +5,11 @@ const DARK = 'dark';
 const STORAGE_KEY = 'dark-mode-toggle';
 
 type Mode = typeof LIGHT | typeof DARK;
+type ModeContextType = string;
+type ModeToggleContextType = () => void;
 
-type ModeContextType = () => void;
-const ModeContext = React.createContext<ModeContextType>(() => {});
+const ModeContext = React.createContext<ModeContextType>('');
+const ModeToggleContext = React.createContext<ModeToggleContextType>(() => {});
 
 const getModeFromStorage = (): Mode | null => {
   if (typeof localStorage === 'undefined') return null;
@@ -73,14 +75,18 @@ const ModeContextProvider: React.FC<Props> = ({ children }) => {
   };
 
   return (
-    <ModeContext.Provider value={toggleMode}>
-      {children}
+    <ModeContext.Provider value={mode}>
+      <ModeToggleContext.Provider value={toggleMode}>
+        {children}
+      </ModeToggleContext.Provider>
     </ModeContext.Provider>
   );
 };
 
 export {
   ModeContext,
+  ModeToggleContext,
   ModeContextType, // eslint-disable-line no-undef
+  ModeToggleContextType, // eslint-disable-line no-undef
   ModeContextProvider,
 };
