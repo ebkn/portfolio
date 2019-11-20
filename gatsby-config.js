@@ -3,7 +3,7 @@ module.exports = {
     title: 'ebiken portfolio',
     author: 'ebiken',
     description: "ebiken's portfolio",
-    siteUrl: 'https://portfolio.ebiken.dev',
+    siteUrl: 'https://ebiken.dev',
     social: {
       twitter: '@ebikentennis',
     },
