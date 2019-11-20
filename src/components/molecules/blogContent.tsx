@@ -16,20 +16,40 @@ const Content = styled.div`
 
   h1,h2,h3,h4,h5,h6 {
     margin: 0;
-    padding: 30px 0 10px 0;
+    padding-bottom: 12.5px;
     line-height: 30px;
     word-break: break-word;
     color: var(--title-color);
   }
-  h1 { font-size: var(--blog-h1-size); }
-  h2 { font-size: var(--blog-h2-size); }
-  h3 { font-size: var(--blog-h3-size); }
-  h4 { font-size: var(--blog-h4-size); }
-  h5 { font-size: var(--blog-h5-size); }
-  h6 { font-size: var(--blog-h6-size); }
+  h1 {
+    font-size: var(--blog-h1-size);
+    padding-top: 37.5px;
+  }
+  h2 {
+    font-size: var(--blog-h2-size);
+    padding-top: 35px;
+  }
+  h3 {
+    font-size: var(--blog-h3-size);
+    padding-top: 32.5px;
+  }
+  h4 {
+    font-size: var(--blog-h4-size);
+    padding-top: 30px;
+  }
+  h5 {
+    font-size: var(--blog-h5-size);
+    padding-top: 27.5px;
+
+  }
+  h6 {
+    font-size: var(--blog-h6-size);
+    padding-top: 25px;
+  }
 
   p {
-    margin: 10px 0;
+    margin: 0;
+    padding: 12.5px 0;
     font-size: var(--normal-size);
     line-height: 30px;
     word-break: break-word;
@@ -40,14 +60,19 @@ const Content = styled.div`
     text-decoration: none;
     border-bottom: 1px solid var(--sub-text-color);
     color: var(--text-color);
+    font-size: var(--text-size);
+    line-height: 30px;
   }
   a.anchor {
     border: none;
   }
 
   ul,ol {
+    margin: 0;
+    padding: 10px 0 10px 20px;
+
     li {
-      padding: 5px 0;
+      padding: 10px 0;
       color: var(--text-color);
 
       p {
