@@ -109,6 +109,11 @@ const Content = styled.div`
     color: var(--text-color);
   }
 
+  hr {
+    margin: 30px 0;
+    color: var(--sub-text-color);
+  }
+
   .gatsby-highlight {
     width: 100%;
     padding: 10px 0;

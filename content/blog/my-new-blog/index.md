@@ -14,6 +14,8 @@ description: Gatsby + Now でサイトを作り直し、ブログ機能をつけ
 コードは公開しています。  
 [ebkn/portfolio](https://github.com/ebkn/portfolio)
 
+---
+
 ## 技術スタック
 今回はこんな感じになりました
 
@@ -212,7 +214,5 @@ Gatsby, Now, GitHub Actions あたりが人気だったので気になってい�
 - [textlint](https://github.com/textlint/textlint) の導入
 - OGP用画像の生成
 - RSS feed の設定
-
----
 
 作業ログとか下書きは [Scrapbox](https://scrapbox.io/ebiken/爆速ブログを作った) に書いています
