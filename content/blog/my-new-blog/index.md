@@ -203,11 +203,16 @@ CD は Now の [GitHub integration](https://zeit.co/docs/v2/more/now-for-github)
 
 ![Now staging deployment GitHub screen shot](now-screenshot.png)
 
-## 感想
-Gatsby, Now, GitHub Actions あたりが人気で触ってみたいなと前から思っていたので触れて良かったです。実際触ってみて結構良かったので布教していきます。
+---
+
+Gatsby, Now, GitHub Actions あたりが人気だったので気になっていましたが、実際触ってみて結構良かったので布教していきます。
 
 今後の機能追加はこのあたりをやる予定です。また、さらに良いやつがでてきたらどんどん作り変えて行こうと思ってます。
 
 - [textlint](https://github.com/textlint/textlint) の導入
 - OGP用画像の生成
 - RSS feed の設定
+
+---
+
+作業ログとか下書きは [Scrapbox](https://scrapbox.io/ebiken/爆速ブログを作った) に書いています
