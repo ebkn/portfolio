@@ -1,3 +1,3 @@
 # portfolio
 
-![ebiken.dev](https://ebiken.dev)
+[blog.ebiken.dev](https://blog.ebiken.dev)
