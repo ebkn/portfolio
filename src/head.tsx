@@ -18,6 +18,7 @@ const query = graphql`
         author
         description
         siteUrl
+        image
         social {
           twitter
         }
@@ -44,8 +45,10 @@ const Head: React.FC<Props> = ({
     { name: 'author', content: site?.siteMetadata?.author || '' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:site', content: site?.siteMetadata?.social?.twitter || '' },
+    { name: 'twitter:image', content: site?.siteMetadata?.image || '' },
     { property: 'og:url', content: site?.siteMetadata?.siteUrl || '' },
     { property: 'og:title', content: metaTitle },
+    { property: 'og:image', content: site?.siteMetadata?.image || '' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: metaTitle },
     { property: 'og:description', content: metaDescription },

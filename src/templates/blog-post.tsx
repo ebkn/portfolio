@@ -21,7 +21,11 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <Head lang="ja" siteTitle={post.frontmatter?.title || ''} />
+      <Head
+        lang="ja"
+        siteTitle={post.frontmatter?.title || ''}
+        description={post.frontmatter?.description || ''}
+      />
       <Container>
         <Header>
           <SectionTitle content={post.frontmatter?.title || ''} />
