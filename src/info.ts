@@ -14,8 +14,8 @@ export default {
     },
     {
       type: 'Twitter',
-      url: 'https://twitter.com/ebikentennis',
-      name: '@ebikentennis',
+      url: 'https://twitter.com/ebkn12',
+      name: '@ebkn12',
       icon: 'twitter_logo.png',
     },
     {
