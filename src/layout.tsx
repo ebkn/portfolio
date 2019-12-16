@@ -40,7 +40,7 @@ const Main = styled.main`
 const GlobalStyle = createGlobalStyle`
 body {
   background-color: var(--bg-color);
-  font-family: 'ヒラギノ角ゴ Pro W3','ヒラギノ角ゴ W3', 'メイリオ', 'ＭＳ Ｐゴシック',sans-serif;
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Sans', 'ヒラギノ角ゴシック', sans-serif;
 
   /* main font size */
   --title-size: 22px;
