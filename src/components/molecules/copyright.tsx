@@ -4,7 +4,7 @@ import Text from '../atoms/text';
 
 const CopyRight: React.FC<{}> = () => (
   <Footer>
-    <Text text="&copy; 2018-2019 Ebinuma Kenichi" />
+    <Text text="&copy; 2018-2020 Ebinuma Kenichi" />
   </Footer>
 );
 const Footer = styled.footer`
