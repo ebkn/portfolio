@@ -12,14 +12,20 @@ interface Props {
 }
 
 const HTML = (props: Props) => (
-  <html lang="ja" {...props.htmlAttributes}>
+  <html
+    lang="ja"
+    {...props.htmlAttributes} // eslint-disable-line react/jsx-props-no-spreading
+  >
     <head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       {props.headComponents}
     </head>
-    <body {...props.bodyAttributes} className="light">
+    <body
+      {...props.bodyAttributes} // eslint-disable-line react/jsx-props-no-spreading
+      className="light"
+    >
       {props.preBodyComponents}
       <noscript key="noscript" id="gatsby-noscript">
         This app works best with JavaScript enabled.
