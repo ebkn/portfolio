@@ -17,13 +17,6 @@ module.exports = {
         name: 'blog',
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: `${__dirname}/content/assets`,
-    //     name: 'assets',
-    //   },
-    // },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -137,5 +130,30 @@ module.exports = {
     },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-firebase',
+      options: {
+        features: {
+          auth: false,
+          database: false,
+          firestore: false,
+          storage: false,
+          messaging: false,
+          functions: false,
+          performance: true,
+          analytics: true,
+        },
+        credentials: {
+          apiKey: 'AIzaSyC5vsB3ECXxMcLSTiaEhmYKkke0z8XEE0s',
+          authDomain: 'portfolio-ebiken.firebaseapp.com',
+          databaseURL: 'https://portfolio-ebiken.firebaseio.com',
+          projectId: 'portfolio-ebiken',
+          storageBucket: 'portfolio-ebiken.appspot.com',
+          messagingSenderId: '476117283723',
+          appId: '1:476117283723:web:bead1f98dc0b97585b758e',
+          measurementId: 'G-5NNVVXSKGF',
+        },
+      },
+    },
   ],
 };
