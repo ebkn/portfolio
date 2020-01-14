@@ -18,5 +18,6 @@ jobs:
           key: npm-packages-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             npm-packages
+      - run: npm install --arch=x64 --platform=linux --target=11.12.0 sharp
       - run: npm install
       - run: npm run build
