@@ -64,6 +64,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   }
 }
