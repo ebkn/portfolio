@@ -15,7 +15,7 @@
     "create-blog": "sh create-new-blog.sh"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "dayjs": "^1.8.19",
     "firebase": "^7.7.0",
     "gatsby": "^2.18.25",
