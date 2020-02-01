@@ -41,6 +41,12 @@ module.exports = {
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
           'gatsby-remark-responsive-iframe',
+          {
+            resolve: '@raae/gatsby-remark-oembed',
+            options: {
+              usePrefix: ["embed"],
+            },
+          },
         ],
       },
     },

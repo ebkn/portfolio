@@ -15,6 +15,7 @@
     "create-blog": "sh create-new-blog.sh"
   },
   "dependencies": {
+    "@raae/gatsby-remark-oembed": "^0.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "dayjs": "^1.8.19",
     "firebase": "^7.7.0",
