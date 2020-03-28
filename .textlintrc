@@ -1,7 +1,8 @@
 {
   "rules": {
-    "no-dead-link": true,
     "preset-ja-technical-writing": true,
+    "ja-technical-writing/ja-no-mixed-period": false,
+    "ja-technical-writing/sentence-length": false,
     "preset-ja-spacing": true
   }
 }
