@@ -6,8 +6,8 @@
   "author": "ebkn <ktennis.mqekr12@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./src/**/*.ts{x,} && textlint ./content/blog/**/index.md",
-    "lint:fix": "./node_modules/.bin/eslint --fix ./src/**/*.ts{x,} && textlint --fix ./content/blog/**/index.md",
+    "lint": "eslint ./src/**/*.ts{x,} && textlint ./content/blog/**/index.md",
+    "lint:fix": "eslint --fix ./src/**/*.ts{x,} && textlint --fix ./content/blog/**/index.md",
     "prebuild": "npm run lint",
     "build": "gatsby build",
     "start": "gatsby develop",
