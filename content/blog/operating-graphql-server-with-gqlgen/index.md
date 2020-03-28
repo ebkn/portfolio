@@ -10,7 +10,7 @@ description: スタートアップで gqlgen を使ってGraphQLサーバーを�
 自分は今スタートアップでバックエンドエンジニアとして、[gqlgen](https://gqlgen.com/) を使ったGraphQLサーバーを運用しています。運用し始めて半年ほど経ったので感想とかを色々書いていこうと思います。  
 具体的な技術スタックは、APIサーバー(Go) gqlgen、iOSアプリ(Swift) [apollo-ios](https://github.com/apollographql/apollo-ios)、管理画面(Vue) [vue-apollo](https://github.com/vuejs/vue-apollo) です。
 
-まずは軽く GraphQL と gqlgen について紹介します。
+まずは軽くGraphQLとgqlgenについて紹介します。
 
 ### GraphQL
 
@@ -32,16 +32,16 @@ GraphQLはAPIのためのクエリ言語/実装です。もともとFacebookが�
 
 > gqlgen is a Go library for building GraphQL servers without any fuss.
 
-gqlgen はスキーマファースト、型安全、コード生成という特徴を持った Go の GraphQL サーバーライブラリです。
+gqlgenはスキーマファースト、型安全、コード生成という特徴を持ったGoのGraphQLサーバーライブラリです。
 
 [gqlgen - getting started](https://gqlgen.com/getting-started/)
 
 ---
 
-GraphQL, gqlgen の特徴についてそれぞれ運用してきた感想を書いていきます。
+GraphQL, gqlgenの特徴についてそれぞれ運用してきた感想を書いていきます。
 
 #### スキーマファースト
-gqlgen は GraphQL のスキーマからコードを生成し、作成された resolver の interface を満たすように実装するというフローになります。そのようにschemaを最初に設計し、それをもとにサーバー/クライアントの実装を進めることをスキーマファースト開発といいます。  
+gqlgenはGraphQLのスキーマからコードを生成し、作成されたresolverのinterfaceを満たすように実装するというフローになります。そのようにschemaを最初に設計し、それをもとにサーバー/クライアントの実装を進めることをスキーマファースト開発といいます。  
 開発チームの背景としてリモート開発がメイン、サーバー/クライアントを実装する人が別というのがあったため、スキーマファーストで開発を進めることは非常に重要でした。
 
 具体的なフローはこんな感じです。
@@ -73,7 +73,7 @@ $ apollo schema:download <schema.json ファイルのパス> \
 
 [apollo-tooling ドキュメント](https://github.com/apollographql/apollo-tooling#apollo-servicedownload-output)
 
-4. サーバー/フロント の実装を進める
+4. サーバー/フロントの実装を進める
 
 このようなフローになっているので、実装後にサーバー/クライアント間の擦り合せ(パラメータが違う、型が違うなど)をする必要がなくなりコミュニケーションコストを減らすことができています。
 
@@ -94,7 +94,7 @@ GraphQLサーバーでページネーションをする場合、推奨されて�
 実装にはこちらで議論されているものを参考にしました。
 - [graphql/graphql-relay-js Pagination implementation for real-life database #94](https://github.com/graphql/graphql-relay-js/issues/94)
 
-このpaginationの実装に関しては gqlgen にpluginとして入れられるようになりそうな話が出ていました。  
+このpaginationの実装に関してはgqlgenにpluginとして入れられるようになりそうな話が出ていました。  
 [99designs/gqlgen #752](https://github.com/99designs/gqlgen/issues/752)
 
 
@@ -117,7 +117,7 @@ input UpdateUserInput {
 }
 ```
 
-- オブジェクトのリストを返したい場合は type を `Connection` として定義する
+- オブジェクトのリストを返したい場合はtypeを `Connection` として定義する
 - pagination用のInputは `PaginationInput` として定義し引数に使用する
 
 ```graphql
@@ -191,7 +191,7 @@ enum PostOrderFields {
 }
 ```
 
-このあたりを参考にしています。特に9月の技術書展7でvvakameさんが執筆された GraphQLスキーマ設計ガイド は非常に参考になりました。
+このあたりを参考にしています。特に9月の技術書展7でvvakameさんが執筆されたGraphQLスキーマ設計ガイドは非常に参考になりました。
 
 - [『GraphQLスキーマ設計ガイド』を技術書典7で頒布します](https://blog.vvaka.me/2019/09/20/graphql-schema-guide/)
 - [GitHub GraphQL API v4](https://developer.github.com/v4/)

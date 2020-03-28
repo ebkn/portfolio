@@ -24,9 +24,9 @@ description: Gatsby + Now でサイトを作り直し、ブログ機能をつけ
 - [Gatsby](https://github.com/gatsbyjs/gatsby)
 - [styled components](https://github.com/styled-components/styled-components)
 - [GitHub Actions](https://github.com/features/actions)
-- [Now](https://now.sh)
+- [Now](https://zeit.co/home)
 
-Gatsby と Now について軽く紹介します
+GatsbyとNowについて軽く紹介します
 
 #### Gatsby
 ![Gatsby](gatsby.jpg)
@@ -53,40 +53,40 @@ Gatsbyは、Reactベースで作成されている爆速サイトを作るフレ
 
 > All-in-one solution for static & JAMstack deployment for performance-obsessed teams.
 
-Now は、Zero config の静的サイトホスティングサービスです。  
+Nowは、Zero configの静的サイトホスティングサービスです。  
 証明書の設定や独自ドメインの指定、CD(GitHubなどと連携)もあり、個人で使う分には無料で使うことができると思います。
 
 ## 主にやったこと
 
-- Markdown でブログを書く
-- コードの syntax highlight
+- Markdownでブログを書く
+- コードのsyntax highlight
 - ダークモード
-- PWA 化(オフライン対応)
-- Gatsby の TypeScript 対応
+- PWA化(オフライン対応)
+- GatsbyのTypeScript対応
 - CI - GitHub Actions
 - CD - Now
 
 #### Markdownでブログを書く + コードのsyntax highlight
 `/content/blog/${title}/index.md` に記事を書くと `/blog/${title}` に追加されるようにしました。  
 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) のコードを参考に実装しました。  
-Syntax Highlight は `gatsby-remark-prismjs` で導入しており、プラグインで用意されているテーマ(数が少ない)を使うか、prismjs用に書かれたCSSを探してくるのが良さそうです。ドキュメントには `gatsby-browser.js` で `require` してと書いてありますが、自分はlight/darkモードでスタイルを分けたかったので `layout.tsx` に書いています。
+Syntax Highlightは `gatsby-remark-prismjs` で導入しており、プラグインで用意されているテーマ(数が少ない)を使うか、prismjs用に書かれたCSSを探してくるのが良さそうです。ドキュメントには `gatsby-browser.js` で `require` してと書いてありますが、自分はlight/darkモードでスタイルを分けたかったので `layout.tsx` に書いています。
 
-[gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs)
+[gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
 
 [prismjs](https://prismjs.com/)
 
 
 #### ダークモード
 右上のアイコンをクリックするとlight/darkモードのスタイルを切り替えるようにしました。  
-最初は [dark-mode-toggle](https://github.com/GoogleChromeLabs/dark-mode-toggle) を使ってやろうとしてたんですが、Reactコンポーネントで状態管理したかったので使いませんでした。ダークモードが有効になっているブラウザでは `prefers-color-scheme` を見るようにしたり、状態を localstorageに入れて保持するようにもしました。  
+最初は [dark-mode-toggle](https://github.com/GoogleChromeLabs/dark-mode-toggle) を使ってやろうとしてたんですが、Reactコンポーネントで状態管理したかったので使いませんでした。ダークモードが有効になっているブラウザでは `prefers-color-scheme` を見るようにしたり、状態をlocalstorageに入れて保持するようにもしました。
 ```js
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   // dark mode
 }
 ```
 
-スタイルは `layout.tsx` に書き、 `body.light`/`body.dark` セレクタに CSS Variables で色を定義しています。  
-また、色を切り替える関数は React Context で定義して子コンポーネントから変更できるようにしました。
+スタイルは `layout.tsx` に書き、 `body.light`/`body.dark` セレクタにCSS Variablesで色を定義しています。  
+また、色を切り替える関数はReact Contextで定義して子コンポーネントから変更できるようにしました。
 
 ```css
 body.light {
@@ -125,7 +125,7 @@ const DarkModeToggleButton: React.FC<{}> = () => {
 },
 ...
 ```
-これで型は生成されるのですが、 `type Maybe<T> = T | null` が大量に含まれているので、最近TypeScriptに入った Optional Chaining をいれました。 `npm i -D @babel/plugin-proposal-optional-chaining` して `.babelrc` に以下を書くと使えます。
+これで型は生成されるのですが、 `type Maybe<T> = T | null` が大量に含まれているので、最近TypeScriptに入ったOptional Chainingをいれました。 `npm i -D @babel/plugin-proposal-optional-chaining` して `.babelrc` に以下を書くと使えます。
 
 ```json:
 {
@@ -138,7 +138,7 @@ const DarkModeToggleButton: React.FC<{}> = () => {
 }
 ```
 
-Optional Chaining についてはここを参考にしました
+Optional Chainingについてはここを参考にしました
 - [proposal](https://github.com/tc39/proposal-optional-chaining)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [TypeScript3.7 リリースノート](https://devblogs.microsoft.com/typescript/announcing-typescript-3-7/#optional-chaining)
@@ -174,7 +174,7 @@ if (workbox) {
 ```
 
 #### CI/CD - GitHub Actions + Now
-CI は [GitHub Actions](https://github.com/features/actions) で構築しました。ちょうど1週間前くらいにβが外れて正式版になり触らなきゃと思ってたので、サクッと学べて丁度良かったです。GitHub公式のCIなのでGitHubで完結してくれるのは良いです。
+CIは [GitHub Actions](https://github.com/features/actions) で構築しました。ちょうど1週間前くらいにβが外れて正式版になり触らなきゃと思ってたので、サクッと学べて丁度良かったです。GitHub公式のCIなのでGitHubで完結してくれるのは良いです。
 ```yml
 ---
 name: main
@@ -200,19 +200,19 @@ jobs:
       - run: npm run build
 ```
 
-CD は Now の [GitHub integration](https://zeit.co/docs/v2/more/now-for-github) という機能を使ったのですが、これが最高でした。default branch に設定されているブランチにコミットされると自動で production デプロイが走り、それ以外のブランチは staging デプロイがされプレビュー用のURLがPRに貼られます。  
+CDはNowの [GitHub integration](https://zeit.co/docs/v2/git-integrations/zeit-now-for-github) という機能を使ったのですが、これが最高でした。default branchに設定されているブランチにコミットされると自動でproductionデプロイが走り、それ以外のブランチはstagingデプロイがされプレビュー用のURLがPRに貼られます。  
 ほとんど設定すること無くこれが使えるのは凄いです。
 
 ![Now staging deployment GitHub screen shot](now-screenshot.png)
 
 ---
 
-Gatsby, Now, GitHub Actions あたりが人気だったので気になっていましたが、実際触ってみて結構良かったので布教していきます。
+Gatsby, Now, GitHub Actionsあたりが人気だったので気になっていましたが、実際触ってみて結構良かったので布教していきます。
 
 今後の機能追加はこのあたりをやる予定です。また、さらに良いやつがでてきたらどんどん作り変えて行こうと思ってます。
 
 - [textlint](https://github.com/textlint/textlint) の導入
 - OGP用画像の生成
-- RSS feed の設定
+- RSS feedの設定
 
 作業ログとか下書きは [Scrapbox](https://scrapbox.io/ebiken/爆速ブログを作った) に書いています
