@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Helmet, { HelmetProps } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import { SiteQuery } from '../types/graphql-types.d';
+import { SiteQuery } from '../types/graphql-types.d'; // eslint-disable-line import/no-unresolved
 
 interface Props {
   lang: 'en' | 'ja';
