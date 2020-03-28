@@ -7,7 +7,7 @@ import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
 import BlogContent from '../components/molecules/blogContent';
 import { formatDate } from '../util';
-import { PageQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
+import { PageQuery } from '../../types/graphql-types.d';
 
 interface Props {
   data: PageQuery;

@@ -7,7 +7,7 @@ import SectionTitle from '../components/atoms/sectionTitle';
 import SmallText from '../components/atoms/smallText';
 import BlogContent from '../components/molecules/blogContent';
 import { formatDate } from '../util';
-import { BlogPostBySlugQuery } from '../../types/graphql-types'; // eslint-disable-line import/no-unresolved
+import { BlogPostBySlugQuery } from '../../types/graphql-types.d';
 
 interface Props {
   data: BlogPostBySlugQuery;
