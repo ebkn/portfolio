@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://blog.ebiken.dev',
     image: 'https://blog.ebiken.dev/images/ogp.png',
     social: {
-      twitter: '@ebikentennis',
+      twitter: '@ebkn12',
     },
   },
   plugins: [

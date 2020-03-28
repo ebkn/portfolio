@@ -4,23 +4,23 @@ date: "2020-02-01T19:00:00+09:00"
 description: Flutterの環境構築をしました
 ---
 
-Flutterの環境構築をしました
+Flutterの環境構築をしました。
 
 ### Flutter
 https://flutter.dev/
 
 > Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
 
-FlutterはGoogleで開発されたOSSのUIフレームワークで、モバイルやweb、デスクトップなどマルチプラットフォームで動くアプリを作ることができます
+FlutterはGoogleで開発されたOSSのUIフレームワークで、モバイルやweb、デスクトップなどマルチプラットフォームで動くアプリを作ることができます。
 
 ---
 
-環境
+#### 環境
 - macOS Catalina v10.15.2
 
-基本的にはFlutter公式の[get-started](https://flutter.dev/docs/get-started/install/macos)を参照しました
+基本的にはFlutter公式の[get-started](https://flutter.dev/docs/get-started/install/macos)を参照しました。
 
-やったことはこんな感じです
+やったことはこんな感じです。
 
 - Flutter SDKのインストール+設定
 - Dartのインストール
@@ -36,20 +36,20 @@ unzip
 $ unzip /path/to/installed/zip/file
 ```
 
-パスの設定
+##### パスの設定
 ```sh
 # シェルの設定ファイル(.zshrc, .bash_profile 等)に追記
 # (unzipしたものをHOMEディレクトリに置いた)
 export PATH="$PATH:$HOME/flutter/bin"
 ```
 
-設定を読み込む
+##### 設定を読み込む
 ```sh
 # シェルの設定ファイルを指定して読み込む
 $ source /path/to/shell/config
 ```
 
-flutter precacheする
+##### flutter precacheする
 > The flutter tool downloads platform-specific development binaries as needed. For scenarios where pre-downloading these artifacts is preferable (for example, in hermetic build environments, or with intermittent network availability)
 
 ```
@@ -57,7 +57,7 @@ $ flutter precache`
 ```
 
 ### Dart のインストール
-homebrewでDartをインストールする
+homebrewでDartをインストール
 ```sh
 $ brew tap dart-lang/dart
 $ brew install dart
@@ -65,18 +65,18 @@ $ brew install dart
 
 ### Android Studio, Xcode のセットアップ
 `flutter doctor` を実行すると足りていない設定をリストアップしてくれるので、それに従っていくつかインストールする。 
-自分の場合はAndroid Studioが入っていなかったので
+自分の場合はAndroid Studioが入っていなかったので、
 ```sh
 $ brew cask install android-studio
 ```
-とライセンス周りのwarningが出ていたので
+とライセンス周りのwarningが出ていたので、
 ```sh
 $ flutter doctor --android-licenses
 ```
-を実行する
+を実行しました。
 
 ### エディタ(Vim) の設定
-2つプラグインを入れました
+2つプラグインを入れました。
 
 #### [dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
 Dartのsyntax highlightやindentをいい感じにする公式のプラグイン
@@ -95,7 +95,7 @@ on_ft = ['dart']
 :CocInstall coc-flutter
 ```
 
-coc-flutterにはファイルのsave時にFlutterのhot reloadを実行してる機能があるらしいのですがうまく動かなかったので、[hot-reload.vim](https://github.com/reisub0/hot-reload.vim)を参考に`.vimrc`に設定を追加しました。
+coc-flutterには、ファイルのsave時にFlutterのhot reloadを実行する機能があるらしいのですがうまく動かなかったので、[hot-reload.vim](https://github.com/reisub0/hot-reload.vim)を参考に`.vimrc`へ設定を追加しました。
 ```.vimrc
 function! TriggerFlutterHotReload() abort
   silent execute '!kill -SIGUSR1 $(pgrep -f "[f]lutter_tool.*run")'

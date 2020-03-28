@@ -4,7 +4,7 @@ date: "2019-11-21T10:00:00+09:00"
 description: Gatsby + Now でサイトを作り直し、ブログ機能をつけました
 ---
 
-こんにちは、[ebiken](https://twitter.com/ebikentennis)です。
+こんにちは、[ebiken](https://twitter.com/ebkn12)です。
 
 1年くらい前に作ったポートフォリオサイトを作り直してブログ機能をつけました。
 色々はてなブログ、Qiita、note、Mediumとかも考えましたが、独自ドメインを使いたかったのと、フロントで遊べる場所に丁度いいなと思ったので自分で作ることにしました。
@@ -17,7 +17,7 @@ description: Gatsby + Now でサイトを作り直し、ブログ機能をつけ
 ---
 
 ## 技術スタック
-今回はこんな感じになりました
+今回はこんな感じになりました。
 
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [React](https://github.com/facebook/react)
@@ -26,7 +26,7 @@ description: Gatsby + Now でサイトを作り直し、ブログ機能をつけ
 - [GitHub Actions](https://github.com/features/actions)
 - [Now](https://zeit.co/home)
 
-GatsbyとNowについて軽く紹介します
+GatsbyとNowについて軽く紹介します。
 
 #### Gatsby
 ![Gatsby](gatsby.jpg)
@@ -41,8 +41,8 @@ Gatsbyは、Reactベースで作成されている爆速サイトを作るフレ
 
 [plugins](https://www.gatsbyjs.org/plugins/)
 
-有名なサイトでの採用事例も結構あり、ブログサイトだと有名な [overreacted.io](https://overreacted.io) もGatsbyで作られています  
-どういう仕組みで動いているのかわかりやすく解説してくれている記事があったので貼っておきます
+有名なサイトでの採用事例も結構あり、ブログサイトだと有名な [overreacted.io](https://overreacted.io) もGatsbyで作られています。  
+どういう仕組みで動いているのかわかりやすく解説してくれている記事があったので貼っておきます。
 - [Reactベース静的サイトジェネレータGatsbyの真の力をお見せします - Qiita](https://qiita.com/uehaj/items/1b7f0a86596353587466)
 
 #### Now
@@ -54,7 +54,7 @@ Gatsbyは、Reactベースで作成されている爆速サイトを作るフレ
 > All-in-one solution for static & JAMstack deployment for performance-obsessed teams.
 
 Nowは、Zero configの静的サイトホスティングサービスです。  
-証明書の設定や独自ドメインの指定、CD(GitHubなどと連携)もあり、個人で使う分には無料で使うことができると思います。
+証明書の設定や独自ドメインの指定、CD(GitHubなどと連携)もあり、個人で使う分には無料で使えるはずです。
 
 ## 主にやったこと
 
@@ -67,9 +67,10 @@ Nowは、Zero configの静的サイトホスティングサービスです。
 - CD - Now
 
 #### Markdownでブログを書く + コードのsyntax highlight
-`/content/blog/${title}/index.md` に記事を書くと `/blog/${title}` に追加されるようにしました。  
+`/content/blog/${title}/index.md` に記事を書くと、 `/blog/${title}` へ追加されるようにしました。  
 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) のコードを参考に実装しました。  
-Syntax Highlightは `gatsby-remark-prismjs` で導入しており、プラグインで用意されているテーマ(数が少ない)を使うか、prismjs用に書かれたCSSを探してくるのが良さそうです。ドキュメントには `gatsby-browser.js` で `require` してと書いてありますが、自分はlight/darkモードでスタイルを分けたかったので `layout.tsx` に書いています。
+Syntax Highlightは `gatsby-remark-prismjs` で導入しており、プラグインで用意されているテーマ(数が少ない)を使うか、prismjs用に書かれたCSSを探してくるのが良さそうです。  
+ドキュメントには `gatsby-browser.js` で読み込むとありますが、ダークモード用のスタイル切り替えのため `layout.tsx` に書いています。
 
 [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
 
@@ -138,7 +139,7 @@ const DarkModeToggleButton: React.FC<{}> = () => {
 }
 ```
 
-Optional Chainingについてはここを参考にしました
+Optional Chainingについてはここを参考にしました。
 - [proposal](https://github.com/tc39/proposal-optional-chaining)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [TypeScript3.7 リリースノート](https://devblogs.microsoft.com/typescript/announcing-typescript-3-7/#optional-chaining)
@@ -211,8 +212,8 @@ Gatsby, Now, GitHub Actionsあたりが人気だったので気になってい�
 
 今後の機能追加はこのあたりをやる予定です。また、さらに良いやつがでてきたらどんどん作り変えて行こうと思ってます。
 
-- [textlint](https://github.com/textlint/textlint) の導入
+- [textlint](https://github.com/textlint/textlint/) の導入
 - OGP用画像の生成
 - RSS feedの設定
 
-作業ログとか下書きは [Scrapbox](https://scrapbox.io/ebiken/爆速ブログを作った) に書いています
+作業ログとか下書きは [Scrapbox](https://scrapbox.io/ebiken/爆速ブログを作った) に書いています。

@@ -3,6 +3,7 @@
     "preset-ja-technical-writing": true,
     "ja-technical-writing/ja-no-mixed-period": false,
     "ja-technical-writing/sentence-length": false,
+    "ja-technical-writing/no-doubled-conjunction": false,
     "preset-ja-spacing": true
   }
 }

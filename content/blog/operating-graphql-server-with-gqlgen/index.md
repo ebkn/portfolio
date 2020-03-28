@@ -6,8 +6,8 @@ description: スタートアップで gqlgen を使ってGraphQLサーバーを�
 
 これは [GraphQL Advent Calendar 2019](https://qiita.com/advent-calendar/2019/graphql) 1日目の記事です
 
-こんにちは、[ebiken](https://twitter.com/ebikentennis) です。  
-自分は今スタートアップでバックエンドエンジニアとして、[gqlgen](https://gqlgen.com/) を使ったGraphQLサーバーを運用しています。運用し始めて半年ほど経ったので感想とかを色々書いていこうと思います。  
+こんにちは、[ebiken](https://twitter.com/ebkn12) です。  
+自分は今スタートアップでバックエンドエンジニアとして、[gqlgen](https://gqlgen.com/) を使ったGraphQLサーバーを運用しています。運用し始めて半年ほど経ったので感想とかを色々書いていきます。  
 具体的な技術スタックは、APIサーバー(Go) gqlgen、iOSアプリ(Swift) [apollo-ios](https://github.com/apollographql/apollo-ios)、管理画面(Vue) [vue-apollo](https://github.com/vuejs/vue-apollo) です。
 
 まずは軽くGraphQLとgqlgenについて紹介します。
@@ -99,7 +99,7 @@ GraphQLサーバーでページネーションをする場合、推奨されて�
 
 
 #### スキーマの設計
-GraphQLの公式ページにはスキーマの書き方や機能について書いてあるものの、それを実際にどう使っていくのかといった情報はまだ少ないです。(特に日本語は)そのため最初はスキーマの設計に苦労しました。そのため何度かスキーマのリファクタリングをしています。
+GraphQLの公式ページにはスキーマの書き方や機能について書いてあるものの、それを実際にどう使っていくのかといった情報はまだ少ないです。そのため最初はスキーマの設計に苦労しました。何度かスキーマのリファクタリングをしています。
 
 実際に使用しているスキーマの設計はこんな感じです。
 - `ID` はglobalでユニークな値を指定する
