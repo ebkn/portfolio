@@ -27,9 +27,15 @@ export const info = {
   ],
   jobs: [
     {
+      name: 'DeNA Co, Ltd.',
+      position: 'Engineer intern',
+      term: '2019/8~2020/3',
+      description: 'Flutter, gRPC',
+    },
+    {
       name: 'STELLA Inc.',
       position: 'Backend/Infrastructure Engineer',
-      term: '2018/8~',
+      term: '2018/8~2019/12',
       description: 'Go, Node.js, AWS(ECS,Fargate,SNS, etc.), GraphQL, MySQL, Redis',
     },
     {
