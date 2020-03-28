@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Helmet, { HelmetProps } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import { SiteQuery } from '../types/graphql-types'; // eslint-disable-line import/no-unresolved
+import { SiteQuery } from '../types/graphql-types.d';
 
 interface Props {
   lang: 'en' | 'ja';
@@ -27,7 +27,7 @@ const query = graphql`
   }
 `;
 
-const Head: React.FC<Props> = ({
+export const Head: React.FC<Props> = ({
   lang,
   meta = {},
   siteTitle = '',
@@ -66,4 +66,3 @@ const Head: React.FC<Props> = ({
     />
   );
 };
-export default Head;

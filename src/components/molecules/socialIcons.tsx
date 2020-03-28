@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import SocialIcon from '../atoms/socialIcon';
+import { SocialIcon } from '../atoms/socialIcon';
 import { ModeContext, ModeContextType } from '../../context/mode';
 
 interface Link {
@@ -12,7 +12,7 @@ interface Props {
   links: Link[];
 }
 
-const SocialIcons: React.FC<Props> = ({ links }) => {
+export const SocialIcons: React.FC<Props> = ({ links }) => {
   const mode = React.useContext<ModeContextType>(ModeContext);
 
   return (
@@ -41,10 +41,10 @@ const SocialIcons: React.FC<Props> = ({ links }) => {
     </IconsWrapper>
   );
 };
+
 const IconsWrapper: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
 `;
-export default SocialIcons;

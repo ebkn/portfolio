@@ -6,13 +6,15 @@ interface Props {
   name: string;
   icon: string;
 }
-const SocialIcon: React.FC<Props> = ({ url, name, icon }: Props) => (
+
+export const SocialIcon: React.FC<Props> = ({ url, name, icon }: Props) => (
   <IconWrapper>
     <StyledLink href={url} target="_blank" rel="noopener">
       <Img src={`/images/${icon}`} alt={name} />
     </StyledLink>
   </IconWrapper>
 );
+
 const IconWrapper: any = styled.div`
   display: flex;
   justify-content: center;
@@ -28,4 +30,3 @@ const Img: any = styled.img`
   height: 40px;
   border-radius: 20px;
 `;
-export default SocialIcon;

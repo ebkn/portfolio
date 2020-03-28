@@ -4,9 +4,11 @@ import styled from 'styled-components';
 interface Props {
   children: any;
 }
-const Container: React.FC<Props> = ({ children }) => (
+
+export const Container: React.FC<Props> = ({ children }) => (
   <Div>{children}</Div>
 );
+
 const Div = styled.div`
   display: flex;
   justify-content: center;
@@ -16,4 +18,3 @@ const Div = styled.div`
   padding: 5px;
   box-sizing: border-box;
 `;
-export default Container;

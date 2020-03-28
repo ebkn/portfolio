@@ -1,4 +1,4 @@
-export default {
+export const info = {
   name: 'Ebinuma Kenichi',
   icon: 'avatar.jpg',
   shortProfile: 'Software engineer / I love tennis, movies, and programming.',

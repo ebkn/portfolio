@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Head from '../head';
-import Title from '../components/atoms/title';
+import { Head } from '../head';
+import { Title } from '../components/atoms/title';
 
 const NotFoundPage: React.FC<{}> = () => (
   <>

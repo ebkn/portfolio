@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from './components/molecules/header';
-import Copyright from './components/molecules/copyright';
+import { Header } from './components/molecules/header';
+import { CopyRight } from './components/molecules/copyright';
 import 'normalize.css';
 
 interface Props {
@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({ children }) => (
       <Header title="ebiken" />
       <Main>
         {children}
-        <Copyright />
+        <CopyRight />
       </Main>
     </LayoutContainer>
   </LayoutWrapper>

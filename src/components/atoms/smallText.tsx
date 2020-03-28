@@ -6,10 +6,9 @@ interface Props {
   alignCenter?: boolean;
 }
 
-const SmallText: React.FC<Props> = ({ text, alignCenter = false }) => (
+export const SmallText: React.FC<Props> = ({ text, alignCenter = false }) => (
   <P alignCenter={alignCenter}>{text}</P>
 );
-export default SmallText;
 
 type PProps = { alignCenter: boolean };
 const P = styled.p`

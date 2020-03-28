@@ -5,10 +5,10 @@ interface Props {
   content: string;
   alignCenter?: boolean;
 }
-const SectionTitle: React.FC<Props> = ({ content, alignCenter = false }: Props) => (
+
+export const SectionTitle: React.FC<Props> = ({ content, alignCenter = false }: Props) => (
   <H2 alignCenter={alignCenter}>{content}</H2>
 );
-export default SectionTitle;
 
 type H2Props = { alignCenter: boolean };
 const H2: any = styled.h2`

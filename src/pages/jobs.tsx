@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Head from '../head';
-import Container from '../components/atoms/container';
-import Job from '../components/molecules/job';
-import info from '../info';
+import { Head } from '../head';
+import { Container } from '../components/atoms/container';
+import { Job } from '../components/molecules/job';
+import { info } from '../info';
 
 const JobsPage: React.FC<{}> = () => (
   <>

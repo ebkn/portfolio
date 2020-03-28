@@ -5,10 +5,9 @@ interface Props {
   html: string;
 }
 
-const BlogContent: React.FC<Props> = ({ html }) => (
+export const BlogContent: React.FC<Props> = ({ html }) => (
   <Content dangerouslySetInnerHTML={{ __html: html }} /> // eslint-disable-line react/no-danger
 );
-export default BlogContent;
 
 const Content = styled.div`
   padding: 20px 0;

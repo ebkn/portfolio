@@ -5,11 +5,12 @@ interface Props {
   fileName: string;
 }
 
-const ProfileIcon: React.FC<Props> = ({ fileName }) => (
+export const ProfileIcon: React.FC<Props> = ({ fileName }) => (
   <Container>
     <Img src={`/images/${fileName}`} alt="avatar" />
   </Container>
 );
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -21,4 +22,3 @@ const Img = styled.img`
   height: 70px;
   border-radius: 35px;
 `;
-export default ProfileIcon;

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import HeaderTitle from '../atoms/headerTitle';
-import DarkModeToggle from '../atoms/darkModeToggle';
-import PageTitle from '../atoms/pageTitle';
+import { HeaderTitle } from '../atoms/headerTitle';
+import { DarkModeToggle } from '../atoms/darkModeToggle';
+import { PageTitle } from '../atoms/pageTitle';
 
 interface Props {
   title: string;
 }
 
-const Header: React.FC<Props> = ({ title }) => (
+export const Header: React.FC<Props> = ({ title }) => (
   <HeaderContainer>
     <StyledLink to="/">
       <HeaderTitle title={title} />
@@ -21,7 +21,6 @@ const Header: React.FC<Props> = ({ title }) => (
     </HeaderRightContainer>
   </HeaderContainer>
 );
-export default Header;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

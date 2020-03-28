@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import SectionTitle from '../atoms/sectionTitle';
-import Text from '../atoms/text';
-import SmallText from '../atoms/smallText';
+import { SectionTitle } from '../atoms/sectionTitle';
+import { Text } from '../atoms/text';
+import { SmallText } from '../atoms/smallText';
 
 interface Props {
   name: string;
@@ -11,7 +11,7 @@ interface Props {
   description: string;
 }
 
-const Job: React.FC<Props> = ({
+export const Job: React.FC<Props> = ({
   name,
   position,
   term,
@@ -27,7 +27,6 @@ const Job: React.FC<Props> = ({
     <Text text={description} />
   </Section>
 );
-export default Job;
 
 const Section = styled.section`
   padding: 25px 0;

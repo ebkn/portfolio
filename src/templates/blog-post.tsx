@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Head from '../head';
-import Container from '../components/atoms/container';
-import SectionTitle from '../components/atoms/sectionTitle';
-import SmallText from '../components/atoms/smallText';
-import BlogContent from '../components/molecules/blogContent';
+import { Head } from '../head';
+import { Container } from '../components/atoms/container';
+import { SectionTitle } from '../components/atoms/sectionTitle';
+import { SmallText } from '../components/atoms/smallText';
+import { BlogContent } from '../components/molecules/blogContent';
 import { formatDate } from '../util';
 import { BlogPostBySlugQuery } from '../../types/graphql-types.d';
 

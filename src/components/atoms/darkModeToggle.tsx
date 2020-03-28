@@ -4,7 +4,7 @@ import { ModeToggleContext, ModeToggleContextType } from '../../context/mode';
 
 const imageURL = '/images/dark-mode-toggle.svg';
 
-const DarkModeToggle: React.FC<{}> = () => {
+export const DarkModeToggle: React.FC<{}> = () => {
   const toggleMode = React.useContext<ModeToggleContextType>(ModeToggleContext);
 
   return (
@@ -13,7 +13,6 @@ const DarkModeToggle: React.FC<{}> = () => {
     </Wrapper>
   );
 };
-export default DarkModeToggle;
 
 const Wrapper = styled.div`
   width: 40px;

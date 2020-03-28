@@ -5,10 +5,9 @@ interface Props {
   title: string;
 }
 
-const HeaderTitle: React.FC<Props> = ({ title }) => (
+export const HeaderTitle: React.FC<Props> = ({ title }) => (
   <H1>{title}</H1>
 );
-export default HeaderTitle;
 
 const H1 = styled.h1`
   font-size: var(--title-size);
