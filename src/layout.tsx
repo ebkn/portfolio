@@ -57,6 +57,26 @@ body {
   --blog-h6-size: 14px;
 }
 
+@media (perfers-color-scheme: dark) {
+  :root {
+    --bg-color: #FAFAFA;
+    --logo-color: #616161;
+    --title-color: #424242;
+    --text-color: #616161;
+    --sub-text-color: #757575;
+  }
+}
+
+@media (perfers-color-scheme: light) {
+  :root {
+    --bg-color: #212121;
+    --logo-color: #BDBDBD;
+    --title-color: #F5F5F5;
+    --text-color: #BDBDBD;
+    --sub-text-color: #9E9E9E;
+  }
+}
+
 body.light {
   --bg-color: #FAFAFA;
   --logo-color: #616161;
