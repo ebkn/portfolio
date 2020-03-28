@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./src/**/*.ts{x,} && textlint ./content/blog/**/index.md",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "./node_modules/.bin/eslint --fix ./src/**/*.ts{x,} && textlint --fix ./content/blog/**/index.md",
     "prebuild": "npm run lint",
     "build": "gatsby build",
     "start": "gatsby develop",
@@ -64,6 +64,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "textlint": "^11.6.3",
+    "textlint-rule-no-dead-link": "^4.6.2",
+    "textlint-rule-preset-ja-spacing": "^2.0.1",
+    "textlint-rule-preset-ja-technical-writing": "^3.1.3",
     "typescript": "^3.8.3"
   }
 }
