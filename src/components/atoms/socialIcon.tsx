@@ -19,14 +19,14 @@ const IconWrapper: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 16px;
 `;
 const StyledLink: any = styled.a`
   text-decoration: none;
   cursor: pointer;
 `;
 const Img: any = styled.img`
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
 `;

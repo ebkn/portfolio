@@ -15,6 +15,6 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 5px;
+  padding: 24px 0;
   box-sizing: border-box;
 `;

@@ -16,11 +16,11 @@ export const DarkModeToggle: React.FC<{}> = () => {
 
 const Wrapper = styled.div`
   width: 40px;
-  height: 60px;
+  height: calc(64px + 4px); /* minor adjustment */
   position: relative;
 `;
 const Image = styled.img`
-  width: 60px;
+  width: 64px;
   position: absolute;
   top: 50%;
   left: 80%;

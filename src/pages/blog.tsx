@@ -47,7 +47,7 @@ export default BlogIndex;
 const Article = styled.article`
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 0 0 48px 0;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;

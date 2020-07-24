@@ -15,7 +15,7 @@ export const PageTitle: React.FC<Props> = ({ title, to }) => (
 
 const StyledLink = styled(Link)`
   display: flex;
-  padding: 0 15px;
+  padding: 0 16px;
   justify-content: center;
   box-sizing: border-box;
   text-decoration: none;

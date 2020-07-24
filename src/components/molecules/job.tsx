@@ -29,15 +29,15 @@ export const Job: React.FC<Props> = ({
 );
 
 const Section = styled.section`
-  padding: 25px 0;
+  padding: 0 0 48px 0;
 `;
 const SubInfoWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 8px;
 `;
 const SubInfoSpace = styled.div`
-  width: 10px;
+  width: 8px;
 `;

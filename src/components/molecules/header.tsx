@@ -31,7 +31,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 30px 25px 10px 25px;
+  padding: 24px 24px 8px 24px;
 `;
 const HeaderRightContainer = styled.div`
   max-width: 60%;

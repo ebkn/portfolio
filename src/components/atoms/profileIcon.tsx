@@ -15,10 +15,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 30px 0;
+  padding: 32px 0;
 `;
 const Img = styled.img`
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
 `;

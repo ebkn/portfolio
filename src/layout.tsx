@@ -34,7 +34,7 @@ const LayoutContainer = styled.div`
 const Main = styled.main`
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 24px;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -43,18 +43,17 @@ body {
   font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Sans', 'ヒラギノ角ゴシック', sans-serif;
 
   /* main font size */
-  --title-size: 22px;
-  --section-title-size: 26px;
-  --page-title-size: 20px;
+  --title-size: 24px;
+  --section-title-size: 32px;
+  --page-title-size: 24px;
   --normal-size: 16px;
   --small-size: 12px;
   /* blog font size */
-  --blog-h1-size: 24px;
-  --blog-h2-size: 22px;
-  --blog-h3-size: 20px;
-  --blog-h4-size: 18px;
+  --blog-h1-size: 32px;
+  --blog-h2-size: 24px;
+  --blog-h3-size: 24px;
+  --blog-h4-size: 16px;
   --blog-h5-size: 16px;
-  --blog-h6-size: 14px;
 }
 
 @media (perfers-color-scheme: dark) {

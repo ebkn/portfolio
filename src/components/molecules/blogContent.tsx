@@ -10,47 +10,42 @@ export const BlogContent: React.FC<Props> = ({ html }) => (
 );
 
 const Content = styled.div`
-  padding: 20px 0;
+  padding: 8px 0;
   color: var(--text-color);
 
   h1,h2,h3,h4,h5,h6 {
     margin: 0;
-    padding-bottom: 12.5px;
-    line-height: 30px;
+    padding-bottom: 16px;
+    line-height: 32px 0 0 0;
     word-break: break-word;
     color: var(--title-color);
   }
   h1 {
     font-size: var(--blog-h1-size);
-    padding-top: 37.5px;
+    padding: 40px 0 0 0;
   }
   h2 {
     font-size: var(--blog-h2-size);
-    padding-top: 35px;
+    padding: 40px 0 0 0;
   }
   h3 {
     font-size: var(--blog-h3-size);
-    padding-top: 32.5px;
+    padding: 40px 0 0 0;
   }
   h4 {
     font-size: var(--blog-h4-size);
-    padding-top: 30px;
+    padding: 40px 0 0 0;
   }
   h5 {
     font-size: var(--blog-h5-size);
-    padding-top: 27.5px;
-
-  }
-  h6 {
-    font-size: var(--blog-h6-size);
-    padding-top: 25px;
+    padding: 32px 0 0 0;
   }
 
-  p {
+  p, details {
     margin: 0;
-    padding: 12.5px 0;
+    padding: 16px 0 0 0;
     font-size: var(--normal-size);
-    line-height: 30px;
+    line-height: 40px;
     word-break: break-word;
     color: var(--text-color);
   }
@@ -60,7 +55,7 @@ const Content = styled.div`
     border-bottom: 1px solid var(--sub-text-color);
     color: var(--text-color);
     font-size: var(--text-size);
-    line-height: 30px;
+    line-height: 32px;
   }
   a.anchor {
     border: none;
@@ -68,17 +63,25 @@ const Content = styled.div`
 
   ul,ol {
     margin: 0;
-    padding: 10px 0 10px 20px;
+    padding: 16px 0 0 24px;
 
     li {
-      padding: 10px 0;
+      padding: 8px 0;
+      font-size: var(--text-size);
+      line-height: 32px;
       color: var(--text-color);
 
       p {
-        margin: 0;
-        padding: 5px 0;
+        padding: 0;
       }
     }
+  }
+
+  li > ul {
+    padding: 0 0 0 24px;
+  }
+  li > ol {
+    padding: 0 0 0 24px;
   }
 
   strong {
@@ -89,12 +92,11 @@ const Content = styled.div`
     width: 100%;
     box-sizing: border-box;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 8px;
 
     p {
-      margin: 10px;
-      font-size: var(--normal-size);
-      line-height: 28px;
+      padding: 8px;
+      line-height: 32px;
       word-break: break-word;
       color: var(--sub-text-color);
     }
@@ -109,13 +111,13 @@ const Content = styled.div`
   }
 
   hr {
-    margin: 30px 0;
+    padding: 24px 0;
     color: var(--sub-text-color);
   }
 
   .gatsby-highlight {
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
     overflow: scroll;
 
     pre {
