@@ -1,4 +1,20 @@
-export const info = {
+export const info: {
+  name: string,
+  icon: string,
+  shortProfile: string,
+  links: {
+    type: string,
+    url: string,
+    name: string,
+    icon: string | { light: string, dark: string },
+  }[],
+  jobs: {
+    name: string,
+    position: string,
+    term: string,
+    description: string,
+  }[],
+} = {
   name: 'Ebinuma Kenichi',
   icon: 'avatar.jpg',
   shortProfile: 'Software engineer / I love tennis, movies, and programming.',
@@ -28,9 +44,15 @@ export const info = {
   jobs: [
     {
       name: 'DeNA Co, Ltd.',
+      position: 'Software Engineer',
+      term: '2020/4~',
+      description: 'Go, GCP',
+    },
+    {
+      name: 'DeNA Co, Ltd.',
       position: 'Engineer intern',
       term: '2019/8~2020/3',
-      description: 'Flutter, gRPC',
+      description: 'Flutter',
     },
     {
       name: 'STELLA Inc.',
