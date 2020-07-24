@@ -7,8 +7,8 @@ description: Vim から neovim に移行したのでメモ
 Vim から neovim に移行したのでメモ
 
 # モチベ
-- neovim使ったことないので試してみたい
-- neovimじゃないと使えない機能がある
+- neovim 使ったことないので試してみたい
+- neovim じゃないと使えない機能がある
   - coc.nvim の VIRTUAL_TEXT とか
 
 # 手順
@@ -182,4 +182,4 @@ endif
 `fzf.vim` の見た目がいい感じになった (左 neovim、右 vim8)
 ![fzf.vim](fzf-vim.png)
 
-速さの違いはまだわからない。大きなファイルを扱うときに違いが出るかも？
+速さの違いはまだわからない。大きなファイルを扱うときに違いが出るかもしれない
