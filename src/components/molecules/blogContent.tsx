@@ -43,9 +43,9 @@ const Content = styled.div`
 
   p, details {
     margin: 0;
-    padding: 16px 0 0 0;
+    padding: 24px 0 0 0;
     font-size: var(--normal-size);
-    line-height: 40px;
+    line-height: 32px;
     word-break: break-word;
     color: var(--text-color);
   }
