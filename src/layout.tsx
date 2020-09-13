@@ -51,7 +51,7 @@ body {
   /* blog font size */
   --blog-h1-size: 32px;
   --blog-h2-size: 24px;
-  --blog-h3-size: 24px;
+  --blog-h3-size: 20px;
   --blog-h4-size: 16px;
   --blog-h5-size: 16px;
 }

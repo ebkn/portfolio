@@ -63,10 +63,10 @@ const Content = styled.div`
 
   ul,ol {
     margin: 0;
-    padding: 16px 0 0 24px;
+    padding: 8px 0 0 24px;
 
     li {
-      padding: 8px 0;
+      padding: 0;
       font-size: var(--text-size);
       line-height: 32px;
       color: var(--text-color);
