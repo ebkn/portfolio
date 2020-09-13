@@ -104,7 +104,7 @@ if ( $http_user_agent ~* (ISUCONbot|Mediapartners-ISUCON|ISUCONCoffee|ISUCONFeed
 
 僕はまずMySQLを2台目のサーバーで動かすように構成変更し、`POST /api/chairs` と `POST /api/estates` のインサートが重いのを潰す作業に入りました。
 
-csvをリクエストで受け取って1行ずつINSERTしていたので、CSVファイルをローカルのファイルシステムに書き出して `LOAD DATA INFILE` でINSERTするようにしました。
+csvをリクエストで受け取って1行ずつINSERTしていたので、CSVファイルをローカルのファイルシステムに書き出して `LOAD DATA INFILE` でINSERTするようにしました。また、この対応でアプリケーションとDBを同じインスタンスに置く必要が出てきたので、2台目のサーバーでもアプリケーションを動かすようにし、`POST /api/chairs `と `POST /api/estates` のリクエストだけ2台目に流すようにNginxの設定も変えました。
 
 ```go
 folder := "/var/lib/mysql-files/"
@@ -139,6 +139,10 @@ if err != nil {
 `LOAD DATA INFILE` ではなくバルクインサートする方法もあったのですが、CSVファイルからの読み込みのほうが20倍速いとドキュメントに書かれていたのでこの方法を取りました。
 
 https://dev.mysql.com/doc/refman/5.6/ja/insert-speed.html
+
+今回はアプリケーションとDBを同じインスタンスに置きましたが、終わってからちゃんとドキュメントを読んでみると `LOAD DATA LOCAL INFILE` にクエリを変えればクライアント側でファイルを読んで送れるみたいでした。2台目のCPU使用率はできるだけ下げたかったので、 `LOAD DATA LOCAL INFILE` を使ったほうが良かったかもしれません。
+
+https://dev.mysql.com/doc/refman/5.6/ja/load-data.html
 
 2人に助けてもらいながらこれを倒し、ここで 1200 点を記録します。全体の13位まで上がったので、めちゃくちゃ盛り上がりました。もう少しで倒せそうなボトルネックいくつかあるし、このままいけば予選突破できるのでは、と思いましたが完全に慢心でした。
 
