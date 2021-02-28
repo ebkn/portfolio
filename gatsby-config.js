@@ -67,10 +67,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          { family: 'Source Code Pro' },
+          'Source Code Pro\:400,500,700',
         ],
       },
     },
