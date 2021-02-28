@@ -111,7 +111,7 @@ const Content = styled.div`
   }
 
   hr {
-    padding: 24px 0;
+    margin: 24px 0;
     color: var(--sub-text-color);
   }
 
