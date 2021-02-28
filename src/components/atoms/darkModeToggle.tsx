@@ -9,7 +9,7 @@ export const DarkModeToggle: React.FC<{}> = () => {
 
   return (
     <Wrapper onClick={toggleMode}>
-      <Image src={imageURL} />
+      <Image src={imageURL} alt="dark-mode-toggle" />
     </Wrapper>
   );
 };
