@@ -8,8 +8,10 @@
     "lib": ["es6", "dom"],
     "jsx": "react",
     "strict": true,
+    "noEmit": true,
     "noImplicitAny": true,
-    "removeComments": false
+    "removeComments": false,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./src/**/*"],
   "exclude": [

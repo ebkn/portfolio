@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface Props {
   content: string;
-  alignCenter: boolean;
+  alignCenter?: boolean;
 }
 
 export const SectionTitle: React.FC<Props> = ({ content, alignCenter = false }: Props) => (

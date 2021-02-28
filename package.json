@@ -2,17 +2,18 @@
   "name": "ebiken",
   "version": "1.0.0",
   "main": "src/index.jsx",
-  "repository": "git@github.com:ebkn/ebiken",
+  "repository": "git@github.com:ebkn/portfolio",
   "author": "ebkn <ktennis.mqekr12@gmail.com>",
   "private": true,
   "scripts": {
     "lint": "eslint ./src/**/*.ts{x,} && textlint ./content/blog/**/index.md",
     "lint:fix": "eslint --fix ./src/**/*.ts{x,} && textlint --fix ./content/blog/**/index.md",
-    "prebuild": "npm run lint",
+    "prebuild": "npm run typecheck && npm run lint",
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "create-blog": "sh create-new-blog.sh"
+    "create-blog": "sh create-new-blog.sh",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
