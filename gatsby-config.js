@@ -78,6 +78,10 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         appendScript: require.resolve('./src/sw.js'),
+        precachePages: ['/blog/*', '/jobs/'],
+        workboxConfig: {
+          importWorkboxFrom: 'cdn',
+        },
       },
     },
     {
@@ -89,6 +93,7 @@ module.exports = {
         background_color: '#FAFAFA',
         theme_color: '#616161',
         display: 'standalone',
+        cache_busting_mode: 'none',
         icon: 'src/icon.jpg',
         icons: [
           {
