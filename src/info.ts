@@ -50,21 +50,21 @@ export const info: {
     },
     {
       name: 'DeNA Co, Ltd.',
-      position: 'Engineer intern',
+      position: 'Mobile Application Engineer (Flutter)',
       term: '2019/8~2020/3',
-      description: 'Application development(Flutter) for ',
+      description: 'Application development for music festival event',
     },
     {
       name: 'STELLA Inc.',
-      position: 'Lead Engineer (Backend/Infrastructure)',
+      position: 'Backend Lead Engineer',
       term: '2018/8~2019/12',
       description: 'Backend application development for mobile(iOS natvie) social media service. Go, TypeScript, AWS(ECS,Fargate,SNS, etc.), GraphQL, MySQL, Redis',
     },
     {
-      name: 'playground Co,. Ltd.',
+      name: 'playground Co, Ltd.',
       position: 'Software Engineer intern',
       term: '2017/7~2018/11',
-      description: 'Web backend, frontend development for electronic ticket service. Rails, Angular, MySQL, Redis',
+      description: 'Web backend, frontend development for web ticket service. Rails, Angular, MySQL, Redis',
     },
     {
       name: 'div Inc.',
