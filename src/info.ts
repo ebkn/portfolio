@@ -17,7 +17,7 @@ export const info: {
 } = {
   name: 'Ebinuma Kenichi',
   icon: 'avatar.jpg',
-  shortProfile: 'Software engineer / I love tennis, movies, and programming.',
+  shortProfile: 'Software engineer / I love tennis, movies, and software development.',
   links: [
     {
       type: 'GitHub',
