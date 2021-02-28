@@ -70,7 +70,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Source Code Pro\:400,500,700',
+          'Source Code Pro',
         ],
       },
     },
