@@ -8,8 +8,9 @@
   "scripts": {
     "lint": "eslint ./src/**/*.ts{x,} && textlint ./content/blog/**/index.md",
     "lint:fix": "eslint --fix ./src/**/*.ts{x,} && textlint --fix ./content/blog/**/index.md",
-    "prebuild": "npm run typecheck && npm run lint",
+    "prebuild": "npm run lint",
     "build": "gatsby build",
+    "postbuild": "npm run typecheck",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "create-blog": "sh create-new-blog.sh",
