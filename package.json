@@ -19,6 +19,7 @@
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
     "babel-plugin-styled-components": "^1.12.0",
+    "core-js": "^2.6.12",
     "dayjs": "^1.10.4",
     "firebase": "^7.24.0",
     "gatsby": "^2.32.8",
@@ -66,6 +67,7 @@
     "eslint-plugin-react": "^7.22.0",
     "gatsby-plugin-feed": "^2.13.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "react-is": "^17.0.2",
     "textlint": "^11.8.2",
     "textlint-rule-preset-ja-spacing": "^2.0.2",
     "textlint-rule-preset-ja-technical-writing": "^3.1.3",
