@@ -35,7 +35,7 @@ description: ISUCON11予選に参加しました。
 
 スコアの推移はこんな感じでした。
 
-https://gyazo.com/dc7088904acda4d85621d133c657cbfb
+![isucon11 score](isucon11-score.png)
 
 ### ~11:30
 
