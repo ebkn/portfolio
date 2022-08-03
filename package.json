@@ -17,7 +17,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@raae/gatsby-remark-oembed": "^0.1.1",
+    "@raae/gatsby-remark-oembed": "^0.3.2",
     "babel-plugin-styled-components": "^1.13.3",
     "core-js": "^2.6.12",
     "dayjs": "^1.11.4",
